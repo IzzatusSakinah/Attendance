@@ -7,7 +7,4 @@
 
 	//retrieve record
 	$results = mysqli_query($connection, "SELECT * FROM session");
-
-	//retrieve group
-	$groups = mysqli_query($connection, "SELECT * FROM group");
 ?>

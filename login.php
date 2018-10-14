@@ -44,7 +44,7 @@
           	<input type="password" id="password"  name="password" class="control" placeholder="Password" required>
             </div>
             
-            <input type="checkbox" value="Remember" class="me">Remember Me
+            <input type="checkbox" value="Remember" class="me"> Remember Me
             
             <input type="submit" value="Login" name="submit" class="btn1">
                     

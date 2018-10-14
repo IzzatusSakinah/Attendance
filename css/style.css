@@ -69,7 +69,7 @@ html, body {
 }
 
 #image{
-    position: fixed;
+    position: absolute;
     left: 45%;
     top: 90px;
 
@@ -1555,3 +1555,194 @@ font-weight: bold;
 background-color: #F6F6F5;
 
 } 
+
+/*manage gl*/
+.design_formm input[type=text]:focus
+      {
+      width: 2000px;
+      border-color: #51a7e8;
+      outline: none;
+      }
+
+.manage1{
+    margin: 100px 0 0 300px;
+}
+
+.group_codee{
+    position: absolute;
+    margin-left: 470px;
+    margin-top: -30px;
+    border: none;
+    width: 20%;
+    height: 40px;
+    background-color: #fff;
+    font-family: roboto;
+    font-size: 13px;
+    padding: 10px;
+}
+
+.manage2{
+    margin: 50px 0 0 300px;
+}
+
+.group_codee1{
+    position: absolute;
+    margin-left: 470px;
+    margin-top: -25px;
+    border: none;
+    width: 20%;
+    height: 40px;
+    background-color: #fff;
+    padding: 10px;
+    font-family: roboto;
+    font-size: 13px;
+}
+
+.manage3{
+    margin: 50px 0 0 300px;
+}
+.session-3{
+    margin: -15px 0 0 580px;
+}
+
+.group_codee2{
+    position: absolute;
+    margin-left: 470px;
+    margin-top: -25px;
+    border: none;
+    width: 20%;
+    height: 40px;
+    background-color: #fff;
+    padding: 10px;
+    font-family: roboto;
+    font-size: 13px;
+    
+}
+
+.custom-2{
+    position: absolute;
+    color: #857E7E;
+    border: none;
+    border-radius: 0;
+    margin-left: 610px;
+    margin-top: -28px;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+    outline: none;
+    box-shadow: none;
+    content: "";
+    background-color: #fff;
+    width: 10%;
+}
+
+.manage4{
+    margin: 50px 0 0 300px;
+}
+
+.custom-3{
+    position: absolute;
+    color: #857E7E;
+    border: none;
+    border-radius: 0;
+    margin-left: 400px;
+    margin-top: -25px;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+    outline: none;
+    box-shadow: none;
+    content: "";
+    background-color: #fff;
+    width: 10%;
+}
+
+.save-button {             /*+++++++++++++++++++++++++++++++++++++++++++++++++*/
+    position: absolute;
+    left: 500px;
+    top: 700px;
+    background-color: #81C8CE;
+    width: 200px;
+    height: 40px;
+}
+                
+.save-button:hover {   /*+++++++++++++++++++++++++++++++++++++++++++++++++*/
+    position: absolute;
+    left: 500px;
+    top: 700px;
+    background-color: #FF5A74;
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+}
+
+.save {
+    position: absolute;
+    left: 60px;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-weight:bold;
+    font-size: 13px; 
+}
+
+.save-1 {
+    position: absolute;
+    left: 80px;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-weight:bold;
+    font-size: 13px; 
+    text-align: center;
+}
+            
+.save-button-1 {             /*+++++++++++++++++++++++++++++++++++++++++++++++++*/
+    position: absolute;
+    left: 710px;
+    top: 700px;
+    background-color: #81C8CE;
+    width: 200px;
+    height: 40px;
+}
+                
+.save-button-1:hover {   /*+++++++++++++++++++++++++++++++++++++++++++++++++*/
+    position: absolute;
+    left: 710px;
+    top: 700px;
+    background-color: #FF5A74;
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+}
+
+.textt {
+    position: absolute;
+                top: 80px;
+                left: 220px;
+                color: #565353;
+                font-family: Roboto;
+                font-weight:bold;
+                font-size: 13px;
+            }
+
+            .textML {
+                position: absolute;
+                top: 80px;
+                left: 310px;
+                color: #81C8CE;
+                font-family: Roboto;
+                font-weight: bold;
+                font-style: italic;
+                font-size: 13px;
+            }
+
+            .textt1 {
+                position: absolute;
+                top: 80px;
+                left: 380px;
+                color: #565353;
+                font-family: Roboto;
+                font-weight:bold;
+                font-size: 13px;
+            }
+
+

@@ -1,6 +1,5 @@
 <?php
 include('function.php');
-include('dbconfig.php');
 ?>
 <!doctype html>
 <html>
@@ -109,6 +108,14 @@ include('dbconfig.php');
             <p class="ml-subheading">List of Module Lecturer (ML)</p>
             <div class="box-mlA">
             <a href="manage_ml.php" style="text-decoration: none;"><p class="C-ctext">Edit/View ML</p></a>
+            </div>
+        </div>
+
+        <div class="box-nominate">
+            <p class="nominate-heading">Nominated Group Coordinator</p>
+            <p class="nominate-subheading">List of Group Coordinator</p>
+            <div class="box-nominateA">
+            <a href="manage_gl.php" style="text-decoration: none;"><p class="C-ctext">Edit/Edit/View Group Coordinator</p></a>
             </div>
         </div>';
         } 
