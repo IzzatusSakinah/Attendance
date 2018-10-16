@@ -51,27 +51,30 @@ include('function.php');
         </div>
 
         <div class="form-manage" >
-          <p class='manage2' >Group Leader</p>
+          <p class='manage2' >Assistant Group Leader</p>
             <select id="gl" name='group_code' class='group_codee1'>
-              <option>Select Group Leader</option>
+              <option>Select Assistant Group Leader</option>
             </select>
         </div>
 
         <div class="save-button">
-            <p class="save"> Save Changes</p>
+            <p class="save">Save Changes</p></a>
         </div>
         <div class="save-button-1">
-            <p class="save-1"><a href="dashboard.php">Cancel</a></p>
+            <p class="save-1">Cancel</p>
         </div>
         </form>
 
-<script type="text/javascript">
+
+
+        <script type="text/javascript">
   function change_code(){
     var xmlhttp=new XMLHttpRequest();
-    xmlhttp.open("GET","data.php?code="+document.getElementById("codeee").value,false);
+    xmlhttp.open("GET","dataa.php?code="+document.getElementById("codeee").value,false);
     xmlhttp.send(null);
     document.getElementById("gl").innerHTML=xmlhttp.responseText;
   }
+
 
 
 </script>

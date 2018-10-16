@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Oct 11, 2018 at 05:27 AM
--- Server version: 10.1.29-MariaDB
--- PHP Version: 7.2.0
+-- Host: localhost
+-- Generation Time: Oct 15, 2018 at 02:53 AM
+-- Server version: 10.1.35-MariaDB
+-- PHP Version: 7.2.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -63,7 +63,8 @@ CREATE TABLE `attendance_status` (
 --
 
 INSERT INTO `attendance_status` (`id`, `user_id`, `status`, `attendance_id`, `remarks`) VALUES
-(1, 1, 'absent', 3, 'no mc letter');
+(1, 1, 'absent', 3, 'no mc letter'),
+(2, 23, 'present', 1, '');
 
 -- --------------------------------------------------------
 
@@ -137,19 +138,20 @@ INSERT INTO `course_student` (`id`, `user_id`, `course_id`) VALUES
 CREATE TABLE `gc` (
   `id` int(20) NOT NULL,
   `user_id` int(20) NOT NULL,
-  `group_id` int(20) NOT NULL
+  `group_id` int(20) NOT NULL,
+  `course_id` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `gc`
 --
 
-INSERT INTO `gc` (`id`, `user_id`, `group_id`) VALUES
-(1, 25, 1),
-(2, 27, 4),
-(3, 26, 2),
-(4, 28, 3),
-(5, 24, 5);
+INSERT INTO `gc` (`id`, `user_id`, `group_id`, `course_id`) VALUES
+(1, 25, 1, ''),
+(2, 27, 4, ''),
+(3, 26, 2, ''),
+(4, 28, 3, ''),
+(5, 24, 5, '');
 
 -- --------------------------------------------------------
 
@@ -162,6 +164,17 @@ CREATE TABLE `gl` (
   `user_id` int(20) NOT NULL,
   `group_id` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `gl`
+--
+
+INSERT INTO `gl` (`id`, `user_id`, `group_id`) VALUES
+(1, 23, 2),
+(2, 16, 4),
+(3, 5, 1),
+(4, 17, 3),
+(5, 8, 5);
 
 -- --------------------------------------------------------
 
@@ -206,7 +219,42 @@ INSERT INTO `group_student` (`id`, `user_id`, `group_id`) VALUES
 (2, 6, 5),
 (3, 22, 2),
 (4, 20, 4),
-(5, 14, 3);
+(5, 14, 3),
+(6, 2, 1),
+(7, 3, 1),
+(8, 4, 1),
+(9, 5, 1),
+(10, 6, 5),
+(11, 7, 5),
+(12, 8, 5),
+(13, 9, 5),
+(14, 10, 5),
+(15, 11, 3),
+(16, 12, 3),
+(17, 13, 3),
+(18, 14, 3),
+(19, 15, 3),
+(20, 16, 4),
+(21, 17, 4),
+(22, 18, 4),
+(23, 19, 4),
+(24, 20, 4),
+(25, 21, 2),
+(26, 23, 2),
+(27, 22, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `leave`
+--
+
+CREATE TABLE `leave` (
+  `from` date NOT NULL,
+  `to` date NOT NULL,
+  `user_id` int(20) NOT NULL,
+  `img` blob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -230,6 +278,18 @@ INSERT INTO `ml` (`id`, `user_id`, `group_id`) VALUES
 (3, 31, 3),
 (4, 30, 2),
 (5, 29, 5);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `recoverykeys`
+--
+
+CREATE TABLE `recoverykeys` (
+  `id` int(50) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `token` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -302,6 +362,18 @@ INSERT INTO `statistic` (`id`, `user_id`, `attendance_id`, `course_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `upload`
+--
+
+CREATE TABLE `upload` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `img` blob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -312,49 +384,50 @@ CREATE TABLE `user` (
   `username` varchar(250) NOT NULL,
   `password` varchar(50) NOT NULL,
   `role` varchar(50) NOT NULL,
-  `code` varchar(50) DEFAULT NULL
+  `code` varchar(50) DEFAULT NULL,
+  `group_id` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `name`, `email`, `username`, `password`, `role`, `code`) VALUES
-(1, 'Ak Md Daniel Bin Pg Wahab', 'wbd02_01090018@pb.edu.bn', 'wbd02_01090018', '12345', 'student', 'DiICT(WBD)/06/16/0216'),
-(2, 'Siti Raihana Binti Moksin', 'wbd02_01070815@pb.edu.bn', 'wbd02_01070815', '12345', 'student', 'DiICT(WBD)/06/16/0235'),
-(3, 'Muhammad Syafi \'Aizzuddeen Bin kalali', 'wbd02_01076170@pb.edu.bn', 'wbd02_01076170', '12345', 'student', 'DiICT(WBD)/06/16/0231'),
-(4, 'Khairunnisa binti Haji Zulkifli', 'wbd02_01111655@pb.edu.bn', 'wbd02_01111655', '12345', 'student', 'DiICT(WBD)/06/16/0220'),
-(5, 'Izzatus Sakinah Binti Awang Masri', 'wbd02_01091598@pb.edu.bn', 'wbd02_01091598', '12345', 'student', 'DiICT(WBD)/06/16/0219'),
-(6, 'Mohammad Hasif bin Matzin', 'dme02_01000001@pb.edu.bn', 'dme02_01000001', '12345', 'student', 'DiICT(DME)/06/16/0285'),
-(7, 'Mohammad Dzul Iskandar bin Shamsol', 'dme02_01000002@pb.edu.bn', 'dme02_01000002', '12345', 'student', 'DilCT(DME)/06/16/0283'),
-(8, 'Arvin ', 'dme02_01000003@pb.edu.bn', 'dme02_01000003', '12345', 'student', 'DiICT(DME)/06/16/0279'),
-(9, 'Mohammad Firdaus bin Ahad', 'dme02_01000004@pb.edu.bn', 'dme02_01000004', '12345', 'student', 'DiICT(DME)/06/16/0264'),
-(10, 'Muhammad Kamarul Arifin bin Haji Mazim', 'dme02_01000005@pb.edu.bn', 'dme02_01000005', '12345', 'student', 'DiICT(DME)/06/16/0270'),
-(11, 'Hazimah Binti Sani', 'lic02_01000006@pb.edu.bn', 'lic02_01000006', '12345', 'student', 'DiICT(LIC)/06/16/0238'),
-(12, 'Nurulain Haziqah Binti Alias', 'lic02_01000007@pb.edu.bn', 'lic02_01000007', '12345', 'student', 'DiICT(LIC)/06/16/0249'),
-(13, 'Nur`Aisyah Binti Md Jarali', 'lic02_01000008@pb.edu.bn', 'lic02_01000008', '12345', 'student', ' DiICT(LIC)/06/16/0244'),
-(14, 'Zainul Arifin Bin Hanipiah', 'lic02_01000009@pb.edu.bn', 'lic02_01000009', '12345', 'student', 'DiICT(LIC)/06/16/0254'),
-(15, 'Hamizah bt Awang Mahmud', 'lic02_010000010@pb.edu.bn', 'lic02_01000010', '12345', 'student', 'DiICT(LIC)/06/16/0251'),
-(16, 'Haziqah Hasyimah binti Hj Awg Omar', 'nws04_01091593@pb.edu.bn', 'nws04_01091593', '12345', 'student', 'DiICT(NWS)/06/16/0339'),
-(17, 'Lutfil Hadi Tajuddin ', 'nws04_01000011@pb.edu.bn', 'nws04_01000011', '12345', 'student', 'DiICT(NWS)/06/16/0341'),
-(18, 'Mohammad Nazmi bin Moss ', 'nws04_01000012@pb.edu.bn', 'nws04_01000012', '12345', 'student', 'DiICT(NWS)/06/16/0343'),
-(19, 'Nur Ain Syuhada bte Haji Miramit', 'nws04_01000013@pb.edu.bn', 'nws04_01000013', '12345', 'student', 'DiICT(NWS)/06/16/0352'),
-(20, 'Nadhirah binti Haji Hassan', 'nws04_01000014@pb.edu.bn', 'nws04_01000014', '12345', 'student', 'DiICT(NWS)/06/16/0351'),
-(21, 'Nurul Nabilah binti Ibrahim', 'ins02_01059815@pb.edu.bn', 'ins02_01059815', '12345', 'student', 'DiICT(INS)/06/16/0324'),
-(22, 'Nor Hayatul Syafiqah binti Mohamad', 'ins02_01047620@pb.edu.bn', 'ins02_01047620', '12345', 'student', 'DiICT(INS)/06/16/0319'),
-(23, 'Amal Syahirah binti Hj Mohd Salleh', 'ins02_01069009@pb.edu.bn', 'ins02_01069009', '12345', 'student', 'DiICT(INS)/06/16/0300'),
-(24, 'Woan Jinn Chong ', 'woan.jinn@pb.edu.bn', 'woanjinn', '12345', 'group coordinator', NULL),
-(25, 'Jamiatul Zuhriah Jamaluddin', 'jamiatul.zuhriah@pb.edu.bn', 'jamiatulzuhriah', '12345', 'group coordinator', NULL),
-(26, 'Amanullah Soomro', 'amanullah.soomro@pb.edu.bn', 'amanullahsoomro', '12345', 'group coordinator', NULL),
-(27, 'Haji Aziman Haji Mohammed', 'haji.aziman@pb.edu.bn', 'hajiaziman', '12345', 'group coordinator', NULL),
-(28, 'Amal Umi Hafizah M Yusoff', 'amal.umi.hafizah@pb.edu.bn', 'amalumihafizah', '12345', 'group coordinator', NULL),
-(29, 'Mas Fatin Wahidah Mahdini', 'mas.fatin.wahidah@pb.edu.bn', 'masfatinwahidah', '12345', 'module lecturer', NULL),
-(30, 'Atiqah Musfirah Leong Mohd Dennis Leong', 'atiqah.musfirah.leong@pb.edu.bn', 'atiqahmusfirahleong', '12345', 'module lecturer', NULL),
-(31, ' Haji Si-Ramlee Haji Serudin', 'haji.siramlee@pb.edu.bn', 'hajisiramlee', '12345', 'module lecturer', NULL),
-(32, 'Bahit Hamid', 'bahit.hamid@pb.edu.bn', 'bahithamid', '12345', 'module lecturer', NULL),
-(33, 'Suok Leng Hii', 'suok.leng.hii@pb.edu.bn', 'suoklenghii', '12345', 'module lecturer', NULL),
-(34, 'Siti Nur\'Afifah binti Sait', 'afifah.sait@pb.edu.bn', 'afifahsait', '12345', 'Module Lecturer', ''),
-(35, 'admin', 'admin@pb.edu.bn', 'admin123', '12345', 'admin', NULL);
+INSERT INTO `user` (`id`, `name`, `email`, `username`, `password`, `role`, `code`, `group_id`) VALUES
+(1, 'Ak Md Daniel Bin Pg Wahab', 'wbd02_01090018@pb.edu.bn', 'wbd02_01090018', '12345', 'student', 'DiICT(WBD)/06/16/0216', 1),
+(2, 'Siti Raihana Binti Moksin', 'wbd02_01070815@pb.edu.bn', 'wbd02_01070815', '12345', 'student', 'DiICT(WBD)/06/16/0235', 1),
+(3, 'Muhammad Syafi \'Aizzuddeen Bin kalali', 'wbd02_01076170@pb.edu.bn', 'wbd02_01076170', '12345', 'student', 'DiICT(WBD)/06/16/0231', 1),
+(4, 'Khairunnisa binti Haji Zulkifli', 'wbd02_01111655@pb.edu.bn', 'wbd02_01111655', '12345', 'student', 'DiICT(WBD)/06/16/0220', 1),
+(5, 'Izzatus Sakinah Binti Awang Masri', 'wbd02_01091598@pb.edu.bn', 'wbd02_01091598', '12345', 'student', 'DiICT(WBD)/06/16/0219', 1),
+(6, 'Mohammad Hasif bin Matzin', 'dme02_01000001@pb.edu.bn', 'dme02_01000001', '12345', 'student', 'DiICT(DME)/06/16/0285', 5),
+(7, 'Mohammad Dzul Iskandar bin Shamsol', 'dme02_01000002@pb.edu.bn', 'dme02_01000002', '12345', 'student', 'DilCT(DME)/06/16/0283', 5),
+(8, 'Arvin ', 'dme02_01000003@pb.edu.bn', 'dme02_01000003', '12345', 'student', 'DiICT(DME)/06/16/0279', 5),
+(9, 'Mohammad Firdaus bin Ahad', 'dme02_01000004@pb.edu.bn', 'dme02_01000004', '12345', 'student', 'DiICT(DME)/06/16/0264', 5),
+(10, 'Muhammad Kamarul Arifin bin Haji Mazim', 'dme02_01000005@pb.edu.bn', 'dme02_01000005', '12345', 'student', 'DiICT(DME)/06/16/0270', 5),
+(11, 'Hazimah Binti Sani', 'lic02_01000006@pb.edu.bn', 'lic02_01000006', '12345', 'student', 'DiICT(LIC)/06/16/0238', 3),
+(12, 'Nurulain Haziqah Binti Alias', 'lic02_01000007@pb.edu.bn', 'lic02_01000007', '12345', 'student', 'DiICT(LIC)/06/16/0249', 3),
+(13, 'Nur`Aisyah Binti Md Jarali', 'lic02_01000008@pb.edu.bn', 'lic02_01000008', '12345', 'student', ' DiICT(LIC)/06/16/0244', 3),
+(14, 'Zainul Arifin Bin Hanipiah', 'lic02_01000009@pb.edu.bn', 'lic02_01000009', '12345', 'student', 'DiICT(LIC)/06/16/0254', 3),
+(15, 'Hamizah bt Awang Mahmud', 'lic02_010000010@pb.edu.bn', 'lic02_01000010', '12345', 'student', 'DiICT(LIC)/06/16/0251', 3),
+(16, 'Haziqah Hasyimah binti Hj Awg Omar', 'nws04_01091593@pb.edu.bn', 'nws04_01091593', '12345', 'student', 'DiICT(NWS)/06/16/0339', 4),
+(17, 'Lutfil Hadi Tajuddin ', 'nws04_01000011@pb.edu.bn', 'nws04_01000011', '12345', 'student', 'DiICT(NWS)/06/16/0341', 4),
+(18, 'Mohammad Nazmi bin Moss ', 'nws04_01000012@pb.edu.bn', 'nws04_01000012', '12345', 'student', 'DiICT(NWS)/06/16/0343', 4),
+(19, 'Nur Ain Syuhada bte Haji Miramit', 'nws04_01000013@pb.edu.bn', 'nws04_01000013', '12345', 'student', 'DiICT(NWS)/06/16/0352', 4),
+(20, 'Nadhirah binti Haji Hassan', 'nws04_01000014@pb.edu.bn', 'nws04_01000014', '12345', 'student', 'DiICT(NWS)/06/16/0351', 4),
+(21, 'Nurul Nabilah binti Ibrahim', 'ins02_01059815@pb.edu.bn', 'ins02_01059815', '12345', 'student', 'DiICT(INS)/06/16/0324', 2),
+(22, 'Nor Hayatul Syafiqah binti Mohamad', 'ins02_01047620@pb.edu.bn', 'ins02_01047620', '12345', 'student', 'DiICT(INS)/06/16/0319', 2),
+(23, 'Amal Syahirah binti Hj Mohd Salleh', 'ins02_01069009@pb.edu.bn', 'ins02_01069009', '12345', 'student', 'DiICT(INS)/06/16/0300', 2),
+(24, 'Woan Jinn Chong ', 'woan.jinn@pb.edu.bn', 'woanjinn', '12345', 'group coordinator', NULL, 0),
+(25, 'Jamiatul Zuhriah Jamaluddin', 'jamiatul.zuhriah@pb.edu.bn', 'jamiatulzuhriah', '12345', 'group coordinator', NULL, 0),
+(26, 'Amanullah Soomro', 'amanullah.soomro@pb.edu.bn', 'amanullahsoomro', '12345', 'group coordinator', NULL, 0),
+(27, 'Haji Aziman Haji Mohammed', 'haji.aziman@pb.edu.bn', 'hajiaziman', '12345', 'group coordinator', NULL, 0),
+(28, 'Amal Umi Hafizah M Yusoff', 'amal.umi.hafizah@pb.edu.bn', 'amalumihafizah', '12345', 'group coordinator', NULL, 0),
+(29, 'Mas Fatin Wahidah Mahdini', 'mas.fatin.wahidah@pb.edu.bn', 'masfatinwahidah', '12345', 'module lecturer', NULL, 0),
+(30, 'Atiqah Musfirah Leong Mohd Dennis Leong', 'atiqah.musfirah.leong@pb.edu.bn', 'atiqahmusfirahleong', '12345', 'module lecturer', NULL, 0),
+(31, ' Haji Si-Ramlee Haji Serudin', 'haji.siramlee@pb.edu.bn', 'hajisiramlee', '12345', 'module lecturer', NULL, 0),
+(32, 'Bahit Hamid', 'bahit.hamid@pb.edu.bn', 'bahithamid', '12345', 'module lecturer', NULL, 0),
+(33, 'Suok Leng Hii', 'suok.leng.hii@pb.edu.bn', 'suoklenghii', '12345', 'module lecturer', NULL, 0),
+(34, 'Siti Nur\'Afifah binti Sait', 'afifah.sait@pb.edu.bn', 'afifahsait', '12345', 'Module Lecturer', '', 0),
+(35, 'admin', 'admin@pb.edu.bn', 'admin', '12345', 'administration', NULL, 0);
 
 --
 -- Indexes for dumped tables
@@ -420,12 +493,24 @@ ALTER TABLE `group_student`
   ADD KEY `group_id` (`group_id`);
 
 --
+-- Indexes for table `leave`
+--
+ALTER TABLE `leave`
+  ADD KEY `user_id` (`user_id`);
+
+--
 -- Indexes for table `ml`
 --
 ALTER TABLE `ml`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`),
   ADD KEY `group_id` (`group_id`);
+
+--
+-- Indexes for table `recoverykeys`
+--
+ALTER TABLE `recoverykeys`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `session`
@@ -452,10 +537,18 @@ ALTER TABLE `statistic`
   ADD KEY `course_id` (`course_id`);
 
 --
+-- Indexes for table `upload`
+--
+ALTER TABLE `upload`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `group_id` (`group_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -507,7 +600,7 @@ ALTER TABLE `group`
 -- AUTO_INCREMENT for table `group_student`
 --
 ALTER TABLE `group_student`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `ml`
@@ -534,6 +627,12 @@ ALTER TABLE `statistic`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `upload`
+--
+ALTER TABLE `upload`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
@@ -557,6 +656,12 @@ ALTER TABLE `attendance_status`
   ADD CONSTRAINT `attendance_status_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
 
 --
+-- Constraints for table `course`
+--
+ALTER TABLE `course`
+  ADD CONSTRAINT `course_ibfk_1` FOREIGN KEY (`id`) REFERENCES `gc` (`group_id`);
+
+--
 -- Constraints for table `course_student`
 --
 ALTER TABLE `course_student`
@@ -578,11 +683,23 @@ ALTER TABLE `gl`
   ADD CONSTRAINT `gl_ibfk_2` FOREIGN KEY (`group_id`) REFERENCES `group` (`id`);
 
 --
+-- Constraints for table `group`
+--
+ALTER TABLE `group`
+  ADD CONSTRAINT `group_ibfk_1` FOREIGN KEY (`id`) REFERENCES `user` (`group_id`);
+
+--
 -- Constraints for table `group_student`
 --
 ALTER TABLE `group_student`
   ADD CONSTRAINT `group_student_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
   ADD CONSTRAINT `group_student_ibfk_2` FOREIGN KEY (`group_id`) REFERENCES `group` (`id`);
+
+--
+-- Constraints for table `leave`
+--
+ALTER TABLE `leave`
+  ADD CONSTRAINT `leave_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
 
 --
 -- Constraints for table `ml`
@@ -606,6 +723,12 @@ ALTER TABLE `statistic`
   ADD CONSTRAINT `statistic_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
   ADD CONSTRAINT `statistic_ibfk_2` FOREIGN KEY (`attendance_id`) REFERENCES `attendance` (`id`),
   ADD CONSTRAINT `statistic_ibfk_3` FOREIGN KEY (`course_id`) REFERENCES `course` (`id`);
+
+--
+-- Constraints for table `upload`
+--
+ALTER TABLE `upload`
+  ADD CONSTRAINT `upload_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

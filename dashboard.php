@@ -54,7 +54,7 @@ include('function.php');
             <p class="nominate-heading">Class Attendance Sheet</p>
             <p class="nominate-subheading">Update Weekly Class Attendance</p>
             <div class="box-profileA">
-                <a href="view_report.php"><p class="B-btext">Update Class Attendance</p></a>
+                <a href="attendance_sheet.php"><p class="B-btext">Update Class Attendance</p></a>
             </div>
         </div>';
         }
@@ -79,13 +79,13 @@ include('function.php');
 
         <?php
         //only visible to admin, ML, GC
-        if($_SESSION['role'] == "admin" || $_SESSION['role'] == "module lecturer" || $_SESSION['role'] == "group coordinator"){    
+        if($_SESSION['role'] == "administration" || $_SESSION['role'] == "module lecturer" || $_SESSION['role'] == "group coordinator"){    
         echo'
         <div class="box-report">
             <p class="report-heading">Class Attendance Sheet</p>
             <p class="report-subheading">Monthly Reports</p>
             <div class="box-reportA">
-                <a href="view_report.php"><p class="B-btext">Edit/View Attendance Report</p></a>
+                <a href="attendance_sheet.php"><p class="B-btext">Edit/View Attendance Report</p></a>
             </div>
         </div>
 
@@ -101,7 +101,7 @@ include('function.php');
 
         <?php
         //only visible to admin
-        if($_SESSION['role'] == "admin"){    
+        if($_SESSION['role'] == "administration"){    
         echo'
         <div class="box-ml">
             <p class="ml-heading">Nominated Module Lecturer</p>

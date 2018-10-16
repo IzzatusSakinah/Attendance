@@ -1243,6 +1243,16 @@ font-weight:bold;
 font-size: 13px;
 }
 
+.text2 {
+position: absolute;
+top: 85px;
+left: 440px;
+color: #565353;
+font-family: Roboto;
+font-weight:bold;
+font-size: 13px;
+}
+
 .logout-box {
 position: relative;
 left: 900px;
@@ -1693,6 +1703,7 @@ background-color: #F6F6F5;
     font-weight:bold;
     font-size: 13px; 
     text-align: center;
+    text-decoration: none;
 }
             
 .save-button-1 {             /*+++++++++++++++++++++++++++++++++++++++++++++++++*/

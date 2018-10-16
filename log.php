@@ -19,9 +19,10 @@ $count = mysqli_num_rows($run_query);
         header("location: dashboard.php");
     }else{
         echo'
-        <p>User does not exist</p>
-        <p>Please try again! Click <a href="login.php">here</a> to login.</p>
+            <script>alert("Incorrect Username/Password!")</script> 
+            <p>Please try again! Click <a href="login.php">here</a> to login.</p>
         ';
+        
     } 
 }   
 ?>     

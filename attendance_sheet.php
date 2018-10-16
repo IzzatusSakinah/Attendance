@@ -97,6 +97,7 @@ include('function.php');
 
         <!-- Table -->    
         <div class="box-A">
+            <form method="post"> 
             <table>
                 <thead>
                     <tr>
@@ -116,19 +117,43 @@ include('function.php');
                         <td><?php echo $row ['name'] ?></td>
                         <td><?php echo $row ['code'] ?></td>
                         <td><?php echo $row ['email'] ?></td>
-                        <td><input type="checkbox" name="checkbox"></td>
-                        <td><input type="checkbox" name="checkbox"></td>
-                        <td><input type="checkbox" name="checkbox"></td>
-                        <td><input type="checkbox" name="checkbox"></td>
-                        <td></td>
+                        <td><input type="checkbox" name="checkbox[<?php echo $row ['id'] ?>]" value="Present"></td>
+                        <td><input type="checkbox" name="checkbox[<?php echo $row ['id'] ?>]" value="Late"></td>
+                        <td><input type="checkbox" name="checkbox[<?php echo $row ['id'] ?>]" value="Excuse"></td>
+                        <td><input type="checkbox" name="checkbox[<?php echo $row ['id'] ?>]" value="Absent"></td>
+                        <td><input type="text" name="remark"></td>
                     </tr>    
                         <?php } ?>
+                    <tr>  
+                        <td><input type="submit" value="submit" name="sub"></td>  
+                    </tr>    
                 </thead>
                 <tbody>
                 </tbody>
             </table>
-        </div>    
+            </form>
 
-        
+            <?php  
+                if(isset($_POST['sub']))  
+                {  
+                $checkbox1=$_POST['checkbox'];  
+                $chk="";
+
+                foreach($checkbox1 as $chk1)  
+                   {  
+                      $chk = $chk1.",";  
+                   }  
+                $in_ch=mysqli_query($connection,"insert into attendance_status(status) values ('$chk')");  
+                if($in_ch==1)  
+                   {  
+                      echo'<script>alert("Inserted Successfully")</script>';  
+                   }  
+                else  
+                   {  
+                      echo'<script>alert("Failed To Insert")</script>';  
+                   }  
+                }  
+?>
+        </div>    
     </body>
 </html>
