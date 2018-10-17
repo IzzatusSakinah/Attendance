@@ -56,14 +56,16 @@ include('function.php');
               <option>Select Group Leader</option>
             </select>
         </div>
+        </form>        
 
-        <div class="save-button">
-            <p class="save"> Save Changes</p>
+        <div>
+          <input type = 'submit' name = 'saveChanges' value = 'Save Changes' class="save-button">
         </div>
+
         <div class="save-button-1">
-            <p class="save-1"><a href="dashboard.php">Cancel</a></p>
+            <p class="save-1">Cancel</p>
         </div>
-        </form>
+
 
 <script type="text/javascript">
   function change_code(){

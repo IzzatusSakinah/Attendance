@@ -1,7 +1,7 @@
 <?php include 'function.php' ;
 
 	$code=$_GET["code"];
-    $namee=$_GET["namee"];
+  $namee=$_GET["namee"];
 
     if($code!="")
     {
@@ -12,7 +12,6 @@
               }
                   echo"</select>";
     }
-
 
     if($name!="")
     {
