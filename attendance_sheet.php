@@ -136,7 +136,13 @@ include('function.php');
             <?php  
                 if(isset($_POST['sub']))  
                 {  
-                $checkbox1=$_POST['checkbox[]'];  
+                $host="localhost";//host name  
+                $username="root"; //database username  
+                $word="";//database word  
+                $db_name="attendance";//database name  
+                $tbl_name="attendance_status"; //table name  
+                $con=mysqli_connect("$host", "$username", "$word","$db_name")or die("cannot connect");//connection string 
+                $checkbox1=$_POST['checkbox'];  
                 $chk="";
 
                 foreach($checkbox1 as $chk1)  
