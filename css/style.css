@@ -333,15 +333,6 @@ background-color: #FFFFFF;
 box-shadow: 2px 2px 2px #A09E9E;
 }
 
-.dashboardtext {
-position: relative;
-top: -15px;
-padding-left: 20px;
-color:#81C8CE;
-font-family: Roboto;
-font-weight:bold;
-}
-
 .logout-box {
 position: relative;
 left: 900px;
@@ -775,6 +766,7 @@ display: block;
 .show {display: block;}
 
 /*DASHBOARD*/
+
 .box-profile {
 position: relative;
 left: 250px;
@@ -920,6 +912,54 @@ font-size: 12px;
     font-size: 12px;  
 }
 
+.box-user {
+    position: absolute;
+    left: 870px;
+    top: 450px;
+    background-color: #FFFFFF;
+    width: 280px;
+    height: 280px;
+    
+}
+.user-heading {
+    position: relative;
+    left: 40px;
+    top: 90px;
+    color: #000000;
+    font-family: Roboto;
+    font-weight: bold; 
+    font-size: 18px;  
+}
+.user-subheading {
+    position: relative;
+    left: 40px;
+    top: 75px;
+    color: #736E6E;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: bold; 
+    font-size: 10px;  
+}
+.box-userA {
+    position: relative;
+    left: 0px;
+    top: 142px;
+    background-color: #FC37AD;
+    width: 280px;
+    height: 60px;
+    
+}
+
+.C-ctext {
+   position: relative;
+    left: 85px;
+    top: 25px;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-weight: bold; 
+    font-size: 12px;  
+}
+
 .box-session {
 position: absolute;
 left: 250px;
@@ -927,7 +967,6 @@ top: 450px;
 background-color: #FFFFFF;
 width: 280px;
 height: 280px;
-padding-bottom: 50px;
 
 }
 .session-heading {
@@ -975,9 +1014,8 @@ top: 450px;
 background-color: #FFFFFF;
 width: 280px;
 height: 280px;
-padding-bottom: 50px;
-
 }
+
 .ml-heading {
 position: relative;
 left: 40px;
@@ -1192,15 +1230,6 @@ height:80px;
 max-width: 100%;
 background-color: #FFFFFF;
 box-shadow: 2px 2px 2px #A09E9E;
-}
-
-.dashboardtext {
-position: relative;
-top: -15px;
-padding-left: 20px;
-color: #D6D4D4;
-font-family: Roboto;
-font-weight:bold;
 }
 
 .attendanceincharge {

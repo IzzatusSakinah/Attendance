@@ -3,13 +3,13 @@ include('function.php');
 ?>
 
 <!doctype html>
-<html lang="{{ app()->getLocale() }}">
+<html">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>PB Attendance</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -58,50 +58,25 @@ include('function.php');
                 <th>ROOM</th>
                 <th>ACTION</th>
             </tr>
-            <tr>
-                <td>1</td>
-                <td>DiICT(INS)0216/02</td>
-                <td>04/09/2018</td>
-                <td>8.00AM - 10.00AM</td>
-                <td>9.04</td>
-                <td></td>
-                
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>DiICT(NWS)0216/02</td>
-                <td>04/09/2018</td>
-                <td>1.00PM - 2.30PM</td>
-                <td>6.04</td>
-                <td></td>
-            </tr>
-        </table>
-
-        
-        <script>
-                    /* When the user clicks on the button, 
-                    toggle between hiding and showing the dropdown content */
-                    function myFunction() {
-                        document.getElementById("myDropdown").classList.toggle("show");
-                    }
-
-                    // Close the dropdown if the user clicks outside of it
-                    window.onclick = function(event) {
-                        if (!event.target.matches('.dropbtn')) {
-
-                            var dropdowns = document.getElementsByClassName("dropdown-content");
-                            var i;
-                                for (i = 0; i < dropdowns.length; i++) {
-                            var openDropdown = dropdowns[i];
-                                if (openDropdown.classList.contains('show')) {
-                                openDropdown.classList.remove('show');
-                            }
-                        }
-                    }
+            
+            <?php
+            $query = 'SELECT * FROM session';
+            $run_query = mysqli_query($connection, $query);
+            ?>
+            
+            <?php
+                foreach($run_query as $session){
+                    echo"
+                    <tr>
+                        <td>" . $session["id"] . "</td>
+                        <td>" . $session["group_id"] . "</td>
+                        <td>" . $session["date"] . "</td>
+                        <td>" . $session["slot_id"] . "</td>
+                        <td>" . $session["room"] . "</td>
+                        <td></td>
+                    </tr>";
                 }
-        </script>
-
-
-
+            ?>    
+        </table>
     </body>
 </html>

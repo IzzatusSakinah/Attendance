@@ -9,7 +9,7 @@ include('function.php');
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>attendance sheet</title>
+        <title>PB Attendance</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -39,7 +39,7 @@ include('function.php');
         <div class="box-B">
             <table class="detail">
                 <?php
-                $query = 'SELECT * FROM user WHERE username="'.$_SESSION['username'].'"';
+                $query = 'SELECT * FROM user WHERE username="'.$_SESSION['id'].'"';
                 $run_query = mysqli_query($connection, $query);
                 ?>
                 <?php
@@ -94,14 +94,7 @@ include('function.php');
 
             </table>
         </div>
-    <?php   
-    $link = mysqli_connect("localhost", "root", "", "attendance");
 
-    if($link === false){
-        die("ERROR: Could not connect. " . mysqli_connect_error());
-    }
-
-    ?>
         <!-- Table     -->
         <div class="box-A">
             <form method="post"> 
@@ -122,20 +115,20 @@ include('function.php');
 
 
                 <?php 
-                    $sql = "SELECT * FROM user LIMIT 23";
-                    $user = mysqli_query($link, $sql);   
+                    $sql = "SELECT * FROM user WHERE role='student'";
+                    $user = mysqli_query($connection, $sql);   
                     while ($row = mysqli_fetch_array($user)) { 
                 ?>
                     <tr>
-                            <td><?php echo $row ['id'] ?></td>
-                            <td><?php echo $row ['name'] ?></td>
-                            <td><?php echo $row ['code'] ?></td>
-                            <td><?php echo $row ['email'] ?></td>
-                            <td><input type="checkbox" name="checkbox[<?php echo $row ['id'] ?>]" value="Present"></td>
-                            <td><input type="checkbox" name="checkbox[<?php echo $row ['id'] ?>]" value="Late"></td>
-                            <td><input type="checkbox" name="checkbox[<?php echo $row ['id'] ?>]" value="Excuse"></td>
-                            <td><input type="checkbox" name="checkbox[<?php echo $row ['id'] ?>]" value="Absent"></td>
-                            <td><input type="text" name="remark"></td>
+                        <td><?php echo $row ['id'] ?></td>
+                        <td><?php echo $row ['name'] ?></td>
+                        <td><?php echo $row ['code'] ?></td>
+                        <td><?php echo $row ['email'] ?></td>
+                        <td><input type="radio" name="radio<?php echo $row['id']; ?>" value="Present" checked></td>
+                        <td><input type="radio" name="radio<?php echo $row['id']; ?>" value="Late"></td>
+                        <td><input type="radio" name="radio<?php echo $row['id']; ?>" value="Excuse"></td>
+                        <td><input type="radio" name="radio<?php echo $row['id']; ?>" value="Absent"></td>
+                        <td><input type="text" name="remark<?php echo $row['id']; ?>"></td>
                     </tr>    
                         <?php } ?>
                     <tr>  
@@ -148,25 +141,20 @@ include('function.php');
             </form>
 
 <?php  
-        if(isset($_POST['sub']))  
-        {  
-           
-            $checkbox1=$_POST['checkbox'];  
-            $chk="";  
-        foreach($checkbox1 as $chk1)  
-            {  
-                    $chk .= $chk1.",";  
-            }  
-            $in_ch=mysqli_query($connection,"insert into attendance_status(status) values ('$chk')");  
-                if($in_ch==1)  
-                    {  
-                        echo'<script>alert("Inserted Successfully")</script>';  
-                    }  
-                else  
-                    {  
-                        echo'<script>alert("Failed To Insert")</script>';  
-                    }  
-        }  
+    if(isset($_POST['sub']))  
+    {  
+
+        $sql = "SELECT * FROM user WHERE role='student'";
+        $user = mysqli_query($connection, $sql);
+        while ($row = mysqli_fetch_array($user)) {
+            $userid = $row['id'];
+            $radioStatus = "radio" . $row['id'];
+            $status = $_POST[$radioStatus];
+            $textRemarks = "remark" . $row['id'];
+            $remarks = $_POST[$textRemarks];
+            $in_ch=mysqli_query($connection,"insert into attendance_status(user_id, status, attendance_id, remarks) values ('$userid', '$status', 2, '$remarks')");
+        }
+    } 
 ?>      
         </div>    
     </body>
