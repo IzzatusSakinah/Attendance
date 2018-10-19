@@ -27,6 +27,4 @@ if(isset($_POST["editProfile"])){
 	}
 }
 
-
-
 ?>

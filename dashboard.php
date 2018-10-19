@@ -41,20 +41,20 @@ include('function.php');
             <p class="report-heading">Attendance</p>
             <p class="report-subheading">Monthly Reports</p>
             <div class="box-reportA">
-                <a href="view_report.php"><p class="B-btext">View Attendance Report</p></a>
+                <a href="view_report.php" style="text-decoration: none;"><p class="B-btext">View Attendance Report</p></a>
             </div>
         </div>
 
         <?php
         //only visible to GL and AGL
-        if($_SESSION['role'] == "gl" || $_SESSION['role'] == "agl"){    
+        if($_SESSION['role'] == "Group Leader" || $_SESSION['role'] == "Assistant Group Leader"){    
         echo'
 
         <div class="box-nominate">
             <p class="nominate-heading">Class Attendance Sheet</p>
             <p class="nominate-subheading">Update Weekly Class Attendance</p>
-            <div class="box-profileA">
-                <a href="attendance_sheet.php"><p class="B-btext">Update Class Attendance</p></a>
+            <div class="box-nominateA">
+                <a href="attendance_sheet.php" style="text-decoration: none;"><p class="B-btext">Update Class Attendance</p></a>
             </div>
         </div>';
         }
@@ -79,7 +79,7 @@ include('function.php');
             <p class="report-heading">Class Attendance Sheet</p>
             <p class="report-subheading">Monthly Reports</p>
             <div class="box-reportA">
-                <a href="attendance_sheet.php"><p class="B-btext">Edit/View Attendance Report</p></a>
+                <a href="verify_attendance.php" style="text-decoration: none;"><p class="B-btext">Edit/View Attendance Report</p></a>
             </div>
         </div>
 
@@ -101,7 +101,7 @@ include('function.php');
             <p class="report-heading">Attendance Summary Report</p>
             <p class="report-subheading">Summary of attendance for all students</p>
             <div class="box-reportA">
-                <a href="attendance_sheet.php"><p class="B-btext">Edit/View Attendance</p></a>
+                <a href="summary_report.php" style="text-decoration: none;"><p class="B-btext">Edit/View Attendance</p></a>
             </div>
         </div>
 
@@ -125,7 +125,7 @@ include('function.php');
             <p class="nominate-heading">Nominated Group Coordinator</p>
             <p class="nominate-subheading">List of Group Coordinator</p>
             <div class="box-nominateA">
-            <a href="manage_gl.php" style="text-decoration: none;"><p class="C-ctext">Edit/View Group Coordinator</p></a>
+            <a href="manage_gc.php" style="text-decoration: none;"><p class="C-ctext">Edit/View Group Coordinator</p></a>
             </div>
         </div>
 

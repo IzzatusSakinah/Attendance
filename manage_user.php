@@ -29,3 +29,37 @@ include('function.php');
         <?php
         include('header.php');
         ?>
+
+        <!-- Page Content -->
+        <div class="box-organize">
+        
+            <table class="box-manageuser">
+                  <thead>
+                    <tr><th colspan="4">LIST OF STUDENT<button align="left">Add New Student</button></th></tr>
+                    <tr> 
+                      <th>ID</th>
+                      <th>Student Name</th>
+                      <th>Email</th>
+                      <th>Student Id</th>
+                    </tr>
+                  </thead>
+                  <?php 
+                        $detail = 'SELECT * FROM user WHERE role="student"';
+                        $run_query = mysqli_query($connection, $detail) or die(mysqli_error($connection));
+
+                        echo '<tbody>';
+                        foreach($run_query as $user){
+                            echo '<tr>
+                                      <th scope="row">'.$user['id'].'</th>
+                                      <td>'.$user['name'].'</td>
+                                      <td>'.$user['email'].'</td>
+                                      <td>'.$user['code'].'</td>
+                                    </tr>';   
+                        }
+                        echo '</tbody>';
+                  ?>
+                </table>   
+        </div>
+</body>
+</html>
+        
