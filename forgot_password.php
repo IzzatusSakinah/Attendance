@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 <?php include('function.php'); ?>
+=======
+<?php
+require_once('function.php');
+?>
+
+>>>>>>> 849005425a22836519485aebc50a6d5eec185f40
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -6,7 +13,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/css/style.css">
-        <title>Authentication</title>
+        <title>Forgot Password</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
