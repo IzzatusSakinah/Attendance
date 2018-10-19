@@ -136,6 +136,156 @@ input.btn1[type="submit"]{
     color: #857E7E;
 }
 
+//session// 
+
+.texts {
+position: absolute;
+top: 80px;
+left: 220px;
+color: #565353;
+font-family: Roboto;
+font-weight:bold;
+font-size: 13px;
+}
+
+.textsess {
+position: absolute;
+top: 80px;
+left: 290px;
+color: #81C8CE;
+font-family: Roboto;
+font-weight: bold;
+font-style: italic;
+font-size: 13px;
+}         
+.classattendancesheettext {
+position: absolute;
+top: 42px;
+left: 133px;
+color: #81C8CE;
+font-family: Roboto;
+font-weight:bold;
+}
+
+.box-class-s {
+position: relative;
+left: 450px;
+top: 73px;
+background-color: #9CDFD6;
+width: 246px;
+height: 193px;
+
+}
+
+.A-heading {
+text-align: center;
+position: relative;
+top: 35px;
+color: #000000;
+font-family: Roboto;
+font-weight: bold; 
+font-size: 18px;  
+}
+
+
+.boxa-A {
+background-color: #43D0BE;
+width: 246px;
+height: 10px;
+
+}
+
+.A-btext {
+
+left: 100px;
+top: 25px;
+color: #FFFFFF;
+font-family: Roboto;
+font-weight: bold; 
+font-size: 12px;  
+}
+
+img{
+position: relative;
+top: -34px;
+left: 15px;
+}
+
+#image-1 {
+position: relative;
+top: 75px;
+left: 66px;
+
+}
+
+#image-2 {
+position: relative;
+top: 50px;
+left: 85px;
+
+}
+
+.dropdown{
+left: 30px;
+}
+
+
+.box-lecture-s {
+position: relative;
+left: 720px;
+top: -120px;
+background-color: #FFFFFF;
+width: 246px;
+height: 193px;
+
+}
+
+.box-class-s:hover {
+color: #FF5A74;
+font-weight: bold;
+background-color: #FFFFFF;
+
+}
+
+.B-heading {
+text-align: center;
+position: relative;
+top: 45px;
+color: #000000;
+font-family: Roboto;
+font-weight: bold; 
+font-size: 18px;  
+}
+
+.box-organize {
+position: relative;
+left: 90px;
+}
+
+
+.dropdown-content {
+display: none;
+position: absolute;
+left: 900px;
+top: 65px;
+background-color: #F6F6F5;
+min-width: 150px;
+overflow: auto;
+z-index: 1;
+}
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+font-size: 12px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown a:hover {background-color: #FF5A74;}
+
+.show {display: block;}
+
 
 /*forget*/
 html, body {
@@ -255,6 +405,44 @@ input.btn[type="submit"]{
     margin: 352px 0px 0px 200px;
 }
 
+table {
+font-family: 'roboto';
+border-collapse: collapse;
+width: 100%;
+font-size: 12px;
+}
+
+
+.box-class-ict {
+position: relative;
+left: 200px;
+top: 73px;
+background-color: #FFFFFF;
+width: 246px;
+height: 193px;
+
+}
+
+.box-class-business {
+position: relative;
+left: 450px;
+top: -120px;
+background-color: #9CDFD6;
+width: 246px;
+height: 193px;
+
+}
+
+.box-class-hse {
+position: relative;
+left: 700px;
+top: -313px;
+background-color: #9CDFD6;
+width: 246px;
+height: 193px;
+
+}
+
 /*STUDENTreport*/
 html, body {
 background-color: #F6F6F5;
@@ -333,22 +521,13 @@ background-color: #FFFFFF;
 box-shadow: 2px 2px 2px #A09E9E;
 }
 
-.dashboardtext {
-position: relative;
-top: -15px;
-padding-left: 20px;
-color:#81C8CE;
-font-family: Roboto;
-font-weight:bold;
-}
-
 .logout-box {
 position: relative;
-left: 900px;
+left: 800px;
 top: 10px;
 background-color: #F6F6F5;
-width: 150px;
-height: 40px;
+width: 250px;
+height: 45px;
 
 }
 
@@ -418,7 +597,14 @@ left: 250px;
 top: 30px;
 width: 900px;
 height: 20px;
+}
 
+.box-manageuser{
+position: absolute;
+left: 250px;
+top: 320px;
+width: 900px;
+height: 20px;
 }
 
 .A-heading {
@@ -505,6 +691,12 @@ max-width: 100%;
 overflow-x: hidden;
 }
 
+.submitImage{
+position: absolute;
+left: 400px;
+top: 130px;
+}
+
 .PB {
 padding: 10px 10px 10px 60px;
 color: #FFFFFF;
@@ -535,11 +727,7 @@ background-color: #F6F6F5;
 margin-left: 160px; /* Same as the width of the sidebar */
 padding: 0px 10px;
 }
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-.sidenav {padding-top: 15px;}
-.sidenav a {font-size: 18px;}
-}
+
 .header-box {
 margin-left: 200px;
 position: relative;
@@ -576,24 +764,6 @@ font-weight:bold;
 font-size: 13px;
 }
 
-.username {
-position: relative;
-left: 20px;
-top: 5px;
-color: #000000;
-font-family: Roboto;
-font-weight: bold; 
-font-size: 12px;
-}
-.user-status {
-position: relative;
-left: 20px;
-top: -5px;
-color: #18BBD5;
-font-family: Roboto;
-font-weight: bold; 
-font-size: 8px;
-}
 .img {
 position: relative;
 top: -34px;
@@ -607,7 +777,7 @@ left: 1030px;
 }
 .status {
 position: absolute;
-top: 130px;
+top: 120px;
 left: 50px;
 color: #FF5A74;
 font-family: Roboto;
@@ -629,7 +799,7 @@ font-size: 13px;
 .userstudent {
 position: absolute;
 top: -22px;
-left: 10px;
+left: -10px;
 color:#FF5A74;
 font-family: Roboto;
 font-weight:bold;
@@ -641,6 +811,14 @@ background-color: #F6F6F5;
 position: absolute;
 top: 220px;
 left: 50px;
+width: 550px;
+height: 50px;
+}
+
+.userbox-change {
+position: absolute;
+top: 220px;
+left: 50px;
 border: 1px solid #81C8CE;
 border-radius: 25px;
 width: 550px;
@@ -648,16 +826,6 @@ height: 50px;
 box-shadow: 3px 3px 3px #C4C4C4;
 }
 
-.userstudent {
-position: absolute;
-top: -22px;
-left: 10px;
-color:#FF5A74;
-font-family: Roboto;
-font-weight:bold;
-font-size: 13px;
-background-color: #F6F6F5; 
-}
 .B {
 position: absolute;
 top: 90px;
@@ -712,7 +880,17 @@ font-size: 13px;
 
 .edit-btn {
 position: absolute;
-left: 220px;
+left: 100px;
+top: 750px;
+background-color: #81C8CE;
+width: 200px;
+height: 40px;
+margin-bottom:150px;  
+}
+
+.cancel-btn {
+position: absolute;
+left: 330px;
 top: 750px;
 background-color: #81C8CE;
 width: 200px;
@@ -723,7 +901,6 @@ margin-bottom:150px;
 .organize {
 position: absolute;
 left: 400px;
-
 }
 
 /* Dropdown*/
@@ -735,16 +912,6 @@ left: 30px;
 position: absolute;
 top: 43px;
 left: 1030px;
-}
-
-.logout-box {
-position: relative;
-left: 900px;
-top: 10px;
-background-color: #F6F6F5;
-width: 150px;
-height: 40px;
-
 }
 
 .dropdown{
@@ -775,6 +942,7 @@ display: block;
 .show {display: block;}
 
 /*DASHBOARD*/
+
 .box-profile {
 position: relative;
 left: 250px;
@@ -920,6 +1088,54 @@ font-size: 12px;
     font-size: 12px;  
 }
 
+.box-user {
+    position: absolute;
+    left: 870px;
+    top: 450px;
+    background-color: #FFFFFF;
+    width: 280px;
+    height: 280px;
+    
+}
+.user-heading {
+    position: relative;
+    left: 40px;
+    top: 90px;
+    color: #000000;
+    font-family: Roboto;
+    font-weight: bold; 
+    font-size: 18px;  
+}
+.user-subheading {
+    position: relative;
+    left: 40px;
+    top: 75px;
+    color: #736E6E;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: bold; 
+    font-size: 10px;  
+}
+.box-userA {
+    position: relative;
+    left: 0px;
+    top: 142px;
+    background-color: #FC37AD;
+    width: 280px;
+    height: 60px;
+    
+}
+
+.C-ctext {
+   position: relative;
+    left: 85px;
+    top: 25px;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-weight: bold; 
+    font-size: 12px;  
+}
+
 .box-session {
 position: absolute;
 left: 250px;
@@ -927,7 +1143,6 @@ top: 450px;
 background-color: #FFFFFF;
 width: 280px;
 height: 280px;
-padding-bottom: 50px;
 
 }
 .session-heading {
@@ -975,9 +1190,8 @@ top: 450px;
 background-color: #FFFFFF;
 width: 280px;
 height: 280px;
-padding-bottom: 50px;
-
 }
+
 .ml-heading {
 position: relative;
 left: 40px;
@@ -1194,15 +1408,6 @@ background-color: #FFFFFF;
 box-shadow: 2px 2px 2px #A09E9E;
 }
 
-.dashboardtext {
-position: relative;
-top: -15px;
-padding-left: 20px;
-color: #D6D4D4;
-font-family: Roboto;
-font-weight:bold;
-}
-
 .attendanceincharge {
 position: absolute;
 top: 42px;
@@ -1251,38 +1456,6 @@ color: #565353;
 font-family: Roboto;
 font-weight:bold;
 font-size: 13px;
-}
-
-.logout-box {
-position: relative;
-left: 900px;
-top: 10px;
-max-width: 100%;
-background-color: #F6F6F5;
-width: 150px;
-height: 40px;
-
-}
-.username {
-position: relative;
-left: 20px;
-top: 5px;
-color: #000000;
-font-family: Roboto;
-font-weight: bold; 
-font-size: 12px;
-
-}
-
-.user-status {
-position: relative;
-left: 20px;
-top: -5px;
-color: #18BBD5;
-font-family: Roboto;
-font-weight: bold; 
-font-size: 8px;
-
 }
 
 .img {
@@ -1440,16 +1613,6 @@ top: 43px;
 left: 1030px;
 }
 
-.logout-box {
-position: relative;
-left: 900px;
-top: 10px;
-background-color: #F6F6F5;
-width: 150px;
-height: 40px;
-
-}
-
 .dropdown{
 left: 30px;
 }
@@ -1567,6 +1730,36 @@ background-color: #F6F6F5;
 } 
 
 /*manage gl*/
+.btnn2 {
+    position: absolute;
+    background: #FF5A74;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 80%;
+    margin: 350px 0 0 500px;
+    padding: 15px;
+    width: 15%;
+    outline: medium none;
+    overflow: hidden;
+}
+
+
+.btnn3 {
+    position: absolute;
+    background: #FF5A74;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 80%;
+    margin: 350px 0 0 740px;
+    padding: 15px;
+    width: 15%;
+    outline: medium none;
+    overflow: hidden;
+}
 .design_formm input[type=text]:focus
       {
       width: 2000px;

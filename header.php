@@ -13,7 +13,7 @@
             }
             ?>
       </div>
-      <p class="dashboardtext">Dashboard</p>
+      <p class="dashboardtext">Welcome to PB Attendance</p>
 
 
       <div class="dropdown">

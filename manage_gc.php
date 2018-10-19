@@ -17,6 +17,7 @@ include('function.php');
 
         <!-- Styles -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/table.css">
     </head>
     <body>
       <!-- Side Navigation -->
@@ -28,10 +29,14 @@ include('function.php');
       <?php
       include('header.php');
       ?>
+
+      <?php
+include('server.php');
+?>
       
       <div>
         <p class="text">Please choose your</p>
-        <p class="textGC">Group Leader</p>
+        <p class="textGC">Group Coordinator</p>
         <p class="texttt-1">in your group.</p>
        
       </div>
@@ -39,10 +44,10 @@ include('function.php');
       <!-- Page Content -->
 
 
-      <form name="form" action="data.php" method="post">
+      <form name="form" action="server.php" method="post">
         <div class="form-manage">
           <p class='manage1'>Course</p>
-            <select name='group_code' class='group_codee''>
+            <select name='course_id' class='group_codee''>
               <?php 
                 $query = mysqli_query($connection, "SELECT * FROM `course` WHERE 1");
                 while($row = mysqli_fetch_array($query)) {
@@ -54,9 +59,9 @@ include('function.php');
 
         <div class="form-manage" >
           <p class='manage2' >Group</p>
-            <select name='group_code' class='group_codee1'>
+            <select name='group_id' class='group_codee1'>
                <?php 
-                $query = mysqli_query($connection, "SELECT * FROM `group` WHERE 1");
+                $query = mysqli_query($connection, "SELECT * FROM `group_table` WHERE 1");
                 while($row = mysqli_fetch_array($query)) {
                   echo '<option value="'.$row['id'].'">'.$row['group_code'].'</option>';
                 }
@@ -66,9 +71,9 @@ include('function.php');
 
         <div class="form-manage" >
           <p class='manage2' >Group Coordinator</p>
-            <select id="gl" name='group_code' class='group_codee1'>
+            <select id="gl" name='user_id' class='group_codee1'>
               <?php 
-                $query = mysqli_query($connection, "SELECT name FROM user WHERE role='module lecturer'");
+                $query = mysqli_query($connection, "SELECT * FROM user WHERE role='module lecturer'");
                 while($row = mysqli_fetch_array($query)) {
                   echo '<option value="'.$row['id'].'">'.$row['name'].'</option>';
                 }
@@ -76,13 +81,10 @@ include('function.php');
             </select>
         </div>
 
-
-        <div class="save-button">
-            <p class="save">Save Changes</p></a>
-        </div>
-        <div class="save-button-1">
-            <p class="save-1">Cancel</p>
-        </div>
+          <div class="savee">
+          <input class="btnn2" type="submit" value="Save Changes" name="submitGC">
+          <input type="button" class="btnn3"  name="Cancelses" value="Cancel" onclick="javascript:history.back();return false;"/>
+          </div>
         </form>
 
     </body>

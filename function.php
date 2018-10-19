@@ -12,4 +12,7 @@
 
 	//retrieve record
 	$results = mysqli_query($connection, "SELECT * FROM session");
+
+	$query = 'SELECT * FROM session INNER JOIN group_table ON session.id = group_table.id';
+    $ses = mysqli_query($connection, $query);
 ?>
