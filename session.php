@@ -45,7 +45,7 @@ include('function.php');
            
         <div class="box-lecture-s">
             <div class="boxa-A"></div>
-                <a href="gcsession"><img id="image-2" src="img/lecture.png" style="width:80px; height:80px;"></a>
+                <a href="session.php"><img id="image-2" src="img/lecture.png" style="width:80px; height:80px;"></a>
                 <p class="s-heading1">Session</p>
             </div>
         </div>

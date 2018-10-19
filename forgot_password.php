@@ -1,3 +1,4 @@
+<?php include('function.php'); ?>
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -15,8 +16,10 @@
 
     </head>
 
+
 <div id="body1">
     <body @media max display= 1080px-0>
+    <form action="php-emailStockAlert.php" method="POST">
        <div id="bg"><img src="img/campus.png" width="170%" height="1000px"></div>
             <div class="content box">
                 <div class="m">
@@ -32,10 +35,11 @@
                     </div> 
 
                     <div class="form-group">
-         			    <input type="email" name="email" class="form-control"/>
+         			    <input type="text" name="email" class="form-control"/>
                     </div>  
                     <div>
-                        <input type="submit" value="Send Email" class="btn" />
+                        <input type="submit" name="submit" value="Send Password" class="btn" />
+
                     </div>
                     <div class="pic">
                         <img src="img/back.png" width="15px">
@@ -43,8 +47,13 @@
                     <div>
                         <a href="login.php" id="a">Sign In</a>
                     </div>
+
             </div>
         </div>
+
         </div>
+
+  </form>
+
     </body>
 </html>

@@ -32,7 +32,7 @@ include('function.php');
 
         <!-- Content -->
         <div class="box">
-            <p>This is Class Attendance Sheet. Only GL and AGL can update the attendance.</p>
+            <p>This is Class Attendance Sheet. Module Lecturer can verify this attendance.</p>
         </div>
 
         <!-- Detail -->
@@ -132,7 +132,7 @@ include('function.php');
                     </tr>    
                         <?php } ?>
                     <tr>  
-                        <td><input type="submit" value="submit" name="sub"></td>
+                        <td><input type="submit" value="Verify" name="sub"></td>
                         <td><button onclick="myFunctionPrint()">Print this page</button></td>
 
                         <script>

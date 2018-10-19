@@ -44,8 +44,8 @@ include('function.php');
             <div class="studentdetail">
                 <?php
                     foreach($run_query as $user){
-                        echo "<p class='username'>".$user['name']."</p>";
-                        echo "<p>".$user['role']."</p>";
+                        echo "<p class='usernameVR'>".$user['name']."</p>";
+                        echo "<p class='userrole'>".$user['role']."</p>";
                     }
 
                 echo"<table>

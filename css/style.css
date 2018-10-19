@@ -138,6 +138,32 @@ input.btn1[type="submit"]{
 
 //session// 
 
+.s-heading {
+    text-align: center;
+    position: relative;
+    top: 35px;
+    color: #000000;
+    font-family: Roboto;
+    font-weight: bold; 
+    font-size: 14px;  
+}
+
+.boxa {
+    background-color: #43D0BE;
+    width: 246px;
+    height: 10px;
+}
+
+.s-heading1 {
+    text-align: center;
+    position: relative;
+    top: 45px;
+    color: #000000;
+    font-family: Roboto;
+    font-weight: bold; 
+    font-size: 14px;  
+}
+
 .texts {
 position: absolute;
 top: 80px;
@@ -539,6 +565,26 @@ color: #000000;
 font-family: Roboto;
 font-weight: bold; 
 font-size: 12px;
+}
+
+.usernameVR {
+position: relative;
+left: 10px;
+top: 5px;
+color: #000000;
+font-family: Roboto;
+font-weight: bold; 
+font-size: 20px;
+}
+
+.userrole {
+position: relative;
+left: 10px;
+top: 5px;
+color: #81C8CE;
+font-family: Roboto;
+font-weight: bold; 
+font-size: 16px;
 }
 
 .user-status {

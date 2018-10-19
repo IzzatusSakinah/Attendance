@@ -107,7 +107,7 @@ include('function.php');
                         <div class='userbox'> 
                             <p class='userstudent'>&nbsp;&nbsp;Fullname&nbsp;&nbsp;</p>
 
-                            <input name = 'name' value = '" . $user["name"] . "' class = 'control'>
+                            <p class='control'>" . $user["name"] . "</p>
 
                         </div>
                     </div>";
@@ -115,7 +115,7 @@ include('function.php');
             ?>
 
             <?php   
-                if($_SESSION['role'] == "student"){
+                if($_SESSION['role'] == "student" || $_SESSION['role'] == "Group Leader" || $_SESSION['role'] == "Assistant Group Leader" ){
                 echo"
                     <div class='copy'>
                         <p class='status'>Student Id</p>
@@ -132,7 +132,7 @@ include('function.php');
                         <div class='userbox'> 
                             <p class='userstudent'>&nbsp;&nbsp;Email&nbsp;&nbsp;</p>
                             
-                            <input type = 'email' name = 'email' value = '" . $user["email"] . "' class = 'control'>
+                            <p class='control'>" . $user["email"] . "</p>
                             
                         </div>
                     </div>
