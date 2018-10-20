@@ -1,0 +1,26 @@
+
+            /* Table*/
+            table {
+                font-family: 'roboto';
+                border-collapse: collapse;
+                width: 85%;
+                margin: 5px 0 0 210px;
+                font-size: 14px;
+            }
+            
+
+            td, th {
+                padding: 10px;
+                width: 30px;
+            }
+            
+
+            tr:nth-child(even) {
+                background-color: #ECECEC;
+            }
+
+            tr:nth-child(odd) {
+                background-color: #fff;
+            }
+            
+            

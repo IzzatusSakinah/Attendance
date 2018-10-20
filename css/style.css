@@ -97,7 +97,7 @@ html, body {
     border: none;
     border-radius: 0;
     margin-top: 3px;
-    padding: 9px 0;
+    padding: 11px 10px;
     width: 100%;
     font-size: 14px;
     outline: none;
@@ -285,7 +285,13 @@ font-size: 18px;
 
 .box-organize {
 position: relative;
-left: 200px;
+left: 210px;
+}
+
+.table-pos{
+position: relative;
+left: 240px;
+width: 80%;
 }
 
 .box-organizeAdd {
@@ -627,7 +633,7 @@ bottom: 30px;
 background-color: #FFFFFF;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 width: 400px;
-height: 200px;
+height: 180px;
 
 }
 
@@ -1392,22 +1398,6 @@ img{
     font-size: 12px;
 }
 
-
-td, th {
-    text-align: center;
-    padding: 10px;
-    height: 30px;
-   
-}
-
-
-tr:nth-child(even) {
-    background-color: #ECECEC;
-}
-
-tr:nth-child(odd) {
-    background-color: #fff;
-}
 
 /*ATTENDANCE*/
 

@@ -61,11 +61,7 @@ include('function.php');
                 
             echo"</div>
         </div>
-
-        <!-- User Detail -->
-        <div class='box-C'>";
-        	echo"<h3>".$user['name']."</h3>";
-        echo"</div>";
+        <br><br>";
         ?>
 
         <!-- Table -->  

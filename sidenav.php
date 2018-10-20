@@ -39,7 +39,7 @@ echo'<p><a href="summary_report.php">Attendance</a></p>
 
 <?php 
 if($_SESSION['role'] == "group coordinator" || $_SESSION['role'] == "student"){
-echo'<p><a href="leave_form.php">Leave Application</a></p>';
+echo'<p><a href="leave.php">Leave Application</a></p>';
 }
 ?>
 </div>

@@ -1,0 +1,29 @@
+/*ATTENDANCE*/
+
+table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #eee;
+    border: 1px solid #eee;
+}
+
+input {
+    cursor: pointer;
+}
+
+.plea{
+    text-align: center;
+}
+
+select{
+    width: 150px;
+}
