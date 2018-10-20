@@ -42,7 +42,7 @@ $id = $_GET['id'];
             <table class="detail"> 
                 <?php
                 $query2 = "SELECT * FROM session INNER JOIN group_table ON group_table.id = session.group_id INNER JOIN slot 
-                ON slot.id = session.slot_id WHERE session.id = '$_GET['id']";
+                ON slot.id = session.slot_id WHERE session.id = '$id'";
                 $session = mysqli_query($connection, $query2);
                 
                 while ($row = mysqli_fetch_array($session)) { ?>

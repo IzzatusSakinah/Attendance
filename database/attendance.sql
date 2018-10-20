@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 20, 2018 at 05:12 AM
+-- Generation Time: Oct 20, 2018 at 12:20 PM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -442,7 +442,7 @@ INSERT INTO `user` (`id`, `name`, `email`, `username`, `password`, `role`, `code
 (2, 'Siti Raihana Binti Moksin', 'wbd02_01070815@pb.edu.bn', 'wbd02_01070815', '12345', 'student', 'DiICT(WBD)/06/16/0235', 1, ''),
 (3, 'Muhammad Syafi \'Aizzuddeen Bin kalali', 'wbd02_01076170@pb.edu.bn', 'wbd02_01076170', '12345', 'student', 'DiICT(WBD)/06/16/0231', 1, ''),
 (4, 'Khairunnisa binti Haji Zulkifli', 'wbd02_01111655@pb.edu.bn', 'wbd02_01111655', '12345', 'student', 'DiICT(WBD)/06/16/0220', 1, ''),
-(5, 'Izzatus Sakinah Binti Awang Masri', 'wbd02_01091598@pb.edu.bn', 'wbd02_01091598', '12345', 'student', 'DiICT(WBD)/06/16/0219', 1, ''),
+(5, 'Izzatus Sakinah Binti Awang Masri', 'wbd02_01091598@pb.edu.bn', 'wbd02_01091598', '12345', 'student', 'DiICT(WBD)/06/16/0219', 1, 'field.png'),
 (6, 'Mohammad Hasif bin Matzin', 'dme02_01000001@pb.edu.bn', 'dme02_01000001', '12345', 'student', 'DiICT(DME)/06/16/0285', 5, ''),
 (7, 'Mohammad Dzul Iskandar bin Shamsol', 'dme02_01000002@pb.edu.bn', 'dme02_01000002', '12345', 'student', 'DilCT(DME)/06/16/0283', 5, ''),
 (8, 'Arvin ', 'dme02_01000003@pb.edu.bn', 'dme02_01000003', '12345', 'student', 'DiICT(DME)/06/16/0279', 5, ''),
@@ -459,7 +459,7 @@ INSERT INTO `user` (`id`, `name`, `email`, `username`, `password`, `role`, `code
 (19, 'Nur Ain Syuhada bte Haji Miramit', 'nws04_01000013@pb.edu.bn', 'nws04_01000013', '12345', 'student', 'DiICT(NWS)/06/16/0352', 4, ''),
 (20, 'Nadhirah binti Haji Hassan', 'nws04_01000014@pb.edu.bn', 'nws04_01000014', '12345', 'student', 'DiICT(NWS)/06/16/0351', 4, ''),
 (21, 'Nurul Nabilah binti Ibrahim', 'ins02_01059815@pb.edu.bn', 'ins02_01059815', '12345', 'student', 'DiICT(INS)/06/16/0324', 2, ''),
-(22, 'Nor Hayatul Syafiqah binti Mohamad', 'ins02_01047620@pb.edu.bn', 'ins02_01047620', '12345', 'Group Leader', 'DiICT(INS)/06/16/0319', 2, ''),
+(22, 'Nor Hayatul Syafiqah binti Mohamad', 'ins02_01047620@pb.edu.bn', 'ins02_01047620', '12345', 'Group Leader', 'DiICT(INS)/06/16/0319', 2, 'dark.jpg'),
 (23, 'Amal Syahirah binti Hj Mohd Salleh', 'ins02_01069009@pb.edu.bn', 'ins02_01069009', '12345', 'student', 'DiICT(INS)/06/16/0300', 2, ''),
 (24, 'Woan Jinn Chong ', 'woan.jinn@pb.edu.bn', 'woanjinn', '12345', 'group coordinator', NULL, 0, ''),
 (25, 'Jamiatul Zuhriah Jamaluddin', 'jamiatul.zuhriah@pb.edu.bn', 'jamiatulzuhriah', '12345', 'group coordinator', NULL, 0, ''),

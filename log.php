@@ -20,7 +20,7 @@ $count = mysqli_num_rows($run_query);
     }else{
         echo'
             <script>alert("Incorrect Username/Password!")</script> 
-            <p>Please try again! Click <a href="login.php">here</a> to login.</p>
+            <p>Please try again! Click <a href="index.php">here</a> to login.</p>
         ';
         
     } 

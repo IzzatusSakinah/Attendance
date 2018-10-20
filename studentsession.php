@@ -46,7 +46,10 @@ include('function.php');
             </tr>
             <tr>
             <?php
-                $query2 = "SELECT * FROM session INNER JOIN group_table ON group_table.id = session.group_id INNER JOIN slot ON slot.id = session.slot_id";
+                $query2 = "SELECT *, session.id as session_id FROM session 
+                INNER JOIN group_table ON group_table.id = session.group_id 
+                INNER JOIN slot ON slot.id = session.slot_id";
+                
                 $session = mysqli_query($connection, $query2);
                 
                 while ($row = mysqli_fetch_array($session)) { ?>
@@ -57,8 +60,11 @@ include('function.php');
                 <td><?php echo $row['room'] ?></td>
                 
                 <?php $id = $row['id'];
+
+                // echo $row["session_id"];
+
                 echo      '<td>
-                        <a href="attendance_sheet.php?id='.$row['id'].'"><button class="cal2" name="sDel"><i class="fa fa-play"></i></button></a>
+                        <a href="attendance_sheet.php?id='.$row['session_id'].'"><button class="cal2" name="sDel"><i class="fa fa-play"></i></button></a>
                         <a href="delete.php"><button class="cal3" name="sDel"><i class="fa fa-remove"></i></button></a>
                         </td>';
                 ?>
