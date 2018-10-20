@@ -35,12 +35,13 @@ include('function.php');
         
             <table class="box-manageuser">
                   <thead>
-                    <tr><th colspan="4">LIST OF STUDENT<button align="left">Add New Student</button></th></tr>
+                    <tr><th colspan="5">LIST OF STUDENT<a href="add_user.php"><button>Add New User</button></a></th></tr>
                     <tr> 
                       <th>ID</th>
                       <th>Student Name</th>
                       <th>Email</th>
                       <th>Student Id</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <?php 
@@ -54,11 +55,89 @@ include('function.php');
                                       <td>'.$user['name'].'</td>
                                       <td>'.$user['email'].'</td>
                                       <td>'.$user['code'].'</td>
+                                      <td></td>
                                     </tr>';   
                         }
                         echo '</tbody>';
                   ?>
-                </table>   
+            </table>
+
+            <br><br><br>
+
+            <table class="box-managestaff">
+                  <thead>
+                    <tr><th colspan="5">LIST OF STAFF<a href="add_user.php"><button>Add New User</button></a></th></tr>
+                    <tr> 
+                      <th>ID</th>
+                      <th>Staff Name</th>
+                      <th>Email</th>
+                      <th>Role</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <?php 
+                        $detail = 'SELECT * FROM user WHERE role="module lecturer"';
+                        $run_query = mysqli_query($connection, $detail) or die(mysqli_error($connection));
+
+                        echo '<tbody>';
+                        foreach($run_query as $user){
+                            echo '<tr>
+                                      <th scope="row">'.$user['id'].'</th>
+                                      <td>'.$user['name'].'</td>
+                                      <td>'.$user['email'].'</td>
+                                      <td>'.$user['role'].'</td>
+                                      <td></td>
+                                    </tr>';   
+                        }
+                        echo '</tbody>';
+                  ?>
+
+                  <?php 
+                        $detail = 'SELECT * FROM user WHERE role="group coordinator"';
+                        $run_query = mysqli_query($connection, $detail) or die(mysqli_error($connection));
+
+                        echo '<tbody>';
+                        foreach($run_query as $user){
+                            echo '<tr>
+                                      <th scope="row">'.$user['id'].'</th>
+                                      <td>'.$user['name'].'</td>
+                                      <td>'.$user['email'].'</td>
+                                      <td>'.$user['role'].'</td>
+                                      <td></td>
+                                    </tr>';   
+                        }
+                        echo '</tbody>';
+                  ?>
+            </table>
+
+            <br><br><br>
+
+            <table class="box-managestaff">
+                  <thead>
+                    <tr><th colspan="5">LIST OF ADMIN<a href="add_user.php"><button>Add New User</button></a></th></tr>
+                    <tr> 
+                      <th>ID</th>
+                      <th>Admin Name</th>
+                      <th>Email</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <?php 
+                        $detail = 'SELECT * FROM user WHERE role="administration"';
+                        $run_query = mysqli_query($connection, $detail) or die(mysqli_error($connection));
+
+                        echo '<tbody>';
+                        foreach($run_query as $user){
+                            echo '<tr>
+                                      <th scope="row">'.$user['id'].'</th>
+                                      <td>'.$user['name'].'</td>
+                                      <td>'.$user['email'].'</td>
+                                      <td></td>
+                                    </tr>';   
+                        }
+                        echo '</tbody>';
+                  ?>
+            </table>   
         </div>
 </body>
 </html>

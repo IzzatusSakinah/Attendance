@@ -16,7 +16,7 @@ echo'<p><a href="view_report.php">Attendance</a></p>';
 
 <?php 
 if($_SESSION['role'] == "Group Leader" || $_SESSION['role'] == "Assistant Group Leader"){
-echo'<p><a href="attendance_sheet.php">Attendance</a></p>
+echo'<p><a href="session.php">Attendance</a></p>
 <p><a href="schedule.php">Schedule</a></p>';
 }
 ?>

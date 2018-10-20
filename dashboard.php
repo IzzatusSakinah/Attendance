@@ -54,7 +54,7 @@ include('function.php');
             <p class="nominate-heading">Class Attendance Sheet</p>
             <p class="nominate-subheading">Update Weekly Class Attendance</p>
             <div class="box-nominateA">
-                <a href="attendance_sheet.php" style="text-decoration: none;"><p class="B-btext">Update Class Attendance</p></a>
+                <a href="session.php" style="text-decoration: none;"><p class="B-btext">Update Class Attendance</p></a>
             </div>
         </div>';
         }
