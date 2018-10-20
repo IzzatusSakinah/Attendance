@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2018 at 04:35 PM
+-- Generation Time: Oct 20, 2018 at 05:12 AM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -85,7 +85,29 @@ INSERT INTO `attendance_status` (`id`, `user_id`, `status`, `attendance_id`, `re
 (204, 20, 'Present', 2, ''),
 (205, 21, 'Present', 2, ''),
 (206, 22, 'Present', 2, ''),
-(207, 23, 'Present', 2, '');
+(207, 23, 'Present', 2, ''),
+(208, 1, 'Present', 2, ''),
+(209, 2, 'Present', 2, ''),
+(210, 3, 'Present', 2, ''),
+(211, 4, 'Present', 2, ''),
+(212, 5, 'Present', 2, ''),
+(213, 6, 'Present', 2, ''),
+(214, 7, 'Present', 2, ''),
+(215, 8, 'Present', 2, ''),
+(216, 9, 'Present', 2, ''),
+(217, 10, 'Present', 2, ''),
+(218, 11, 'Present', 2, ''),
+(219, 12, 'Present', 2, ''),
+(220, 13, 'Present', 2, ''),
+(221, 14, 'Late', 2, '15min'),
+(222, 15, 'Excuse', 2, 'MC'),
+(223, 16, 'Absent', 2, ''),
+(224, 17, 'Present', 2, ''),
+(225, 18, 'Present', 2, ''),
+(226, 19, 'Present', 2, ''),
+(227, 20, 'Present', 2, ''),
+(228, 21, 'Present', 2, ''),
+(229, 23, 'Present', 2, '');
 
 -- --------------------------------------------------------
 
@@ -450,7 +472,7 @@ INSERT INTO `user` (`id`, `name`, `email`, `username`, `password`, `role`, `code
 (32, 'Bahit Hamid', 'bahit.hamid@pb.edu.bn', 'bahithamid', '12345', 'module lecturer', NULL, 0, ''),
 (33, 'Suok Leng Hii', 'suok.leng.hii@pb.edu.bn', 'suoklenghii', '12345', 'module lecturer', NULL, 0, ''),
 (34, 'Siti Nur\'Afifah binti Sait', 'afifah.sait@pb.edu.bn', 'afifahsait', '12345', 'module lecturer', '', 0, ''),
-(35, 'admin', 'admin@pb.edu.bn', 'admin', '12345', 'administration', NULL, 0, '');
+(35, 'admin', 'admin@pb.edu.bn', 'admin', '12345', 'administration', NULL, 0, 'arch.png');
 
 --
 -- Indexes for dumped tables
@@ -587,7 +609,7 @@ ALTER TABLE `attendance`
 -- AUTO_INCREMENT for table `attendance_status`
 --
 ALTER TABLE `attendance_status`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=208;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=230;
 
 --
 -- AUTO_INCREMENT for table `course`
