@@ -30,6 +30,16 @@ include('function.php');
         ?>
 
         <!-- Page Content -->
+        <div class="organize">
+        <?php
+            $query1 = 'SELECT image FROM user WHERE id="'.$_SESSION['id'].'" ';
+            $run_query1 = mysqli_query($connection, $query1);
+            
+            foreach($run_query1 as $users){
+                  echo "<img src='img/profile_img/".$users['image']."' class='image_upload'>";
+            }
+        ?>
+        </div>
 
         <form action="" method="post" enctype="multipart/form-data">
             <div class="organize">

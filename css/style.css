@@ -138,14 +138,14 @@ input.btn1[type="submit"]{
 
 //session// 
 
-.s-heading {
+.s-heading{
     text-align: center;
-    position: relative;
-    top: 35px;
+    position: absolute;
+    top: 45px;
     color: #000000;
     font-family: Roboto;
     font-weight: bold; 
-    font-size: 14px;  
+    font-size: 14px;
 }
 
 .boxa {
@@ -165,8 +165,7 @@ input.btn1[type="submit"]{
 }
 
 .texts {
-position: absolute;
-top: 80px;
+position: relative;
 left: 220px;
 color: #565353;
 font-family: Roboto;
@@ -175,23 +174,15 @@ font-size: 13px;
 }
 
 .textsess {
-position: absolute;
-top: 80px;
+position: relative;
 left: 290px;
+top: -28px;
 color: #81C8CE;
 font-family: Roboto;
 font-weight: bold;
 font-style: italic;
 font-size: 13px;
 }         
-.classattendancesheettext {
-position: absolute;
-top: 42px;
-left: 133px;
-color: #81C8CE;
-font-family: Roboto;
-font-weight:bold;
-}
 
 .box-class-s {
 position: relative;
@@ -200,7 +191,21 @@ top: 73px;
 background-color: #9CDFD6;
 width: 246px;
 height: 193px;
+}
 
+.cal{
+background: #9CDFD6;
+border: none;
+color: #fff;
+cursor: pointer;
+font-size: 80%;
+margin: -100px 0 0 1250px;
+padding: 15px;
+width: 10%;
+outline: medium none;
+overflow: hidden;
+top: -500px;
+left: -100px;
 }
 
 .A-heading {
@@ -267,10 +272,9 @@ height: 193px;
 }
 
 .box-class-s:hover {
-color: #FF5A74;
+color: #000;
 font-weight: bold;
 background-color: #FFFFFF;
-
 }
 
 .B-heading {
@@ -292,6 +296,14 @@ left: 210px;
 position: relative;
 left: 240px;
 width: 80%;
+}
+
+.image_upload{
+position: relative;
+left: 400px;
+top: 100px;
+width: 200px;  
+height: 200px; 
 }
 
 .box-organizeAdd {
@@ -1311,6 +1323,7 @@ font-size: 12px;
     text-align: center;
     position: relative;
     top: 35px;
+    left: 00px;
     color: #000000;
     font-family: Roboto;
     font-weight: bold; 

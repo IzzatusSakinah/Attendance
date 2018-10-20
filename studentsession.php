@@ -61,8 +61,6 @@ include('function.php');
                 
                 <?php $id = $row['id'];
 
-                // echo $row["session_id"];
-
                 echo      '<td>
                         <a href="attendance_sheet.php?id='.$row['session_id'].'"><button class="cal2" name="sDel"><i class="fa fa-play"></i></button></a>
                         <a href="delete.php"><button class="cal3" name="sDel"><i class="fa fa-remove"></i></button></a>

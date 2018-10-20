@@ -28,19 +28,16 @@ include('function.php');
         <?php
             include('header.php');  
         ?>
-<div>
+
         <p class="texts">This is your</p>
         <p class="textsess">Class Session.</p>
-        
-       
-      </div>
        
         <div class="box-organize">
             <div class="box-class-s">
                     <div id="image-1">
                         <a href="schedule.php"><img src="img/class.png" style="width:80px; height:80px;"></a>
-                    </div>
                         <p class="s-heading">Schedule</p>
+                    </div>
             </div>
            
         <div class="box-lecture-s">
@@ -51,64 +48,44 @@ include('function.php');
         </div>
 
         <a href="addsession.php"><input class="cal" type="submit" name="add" value="Add Session"/></a>
+        
         <!-- Table -->
-        <table>
+        <table class="table-pos">
 
             <tr>
-                <th>#</th>
-                <th>COURSE</th>
                 <th>DATE</th>
+                <th>Group Code</th>
                 <th>TIME</th>
                 <th>ROOM</th>
                 <th>ACTION</th>
             </tr>
+
             <tr>
             <?php
-                $query2 = "SELECT * FROM session INNER JOIN course ON course.id = session.course_id INNER JOIN group_table ON group_table.id = session.group_id INNER JOIN slot ON slot.id = session.slot_id";
-                $sessi = mysqli_query($connection, $query2);
+                $query2 = "SELECT *, session.id as session_id FROM session 
+                INNER JOIN group_table ON group_table.id = session.group_id 
+                INNER JOIN slot ON slot.id = session.slot_id";
                 
-                while ($row = mysqli_fetch_array($sessi)) { ?>
+                $session = mysqli_query($connection, $query2);
+                
+                while ($row = mysqli_fetch_array($session)) { ?>
 
-                <td><?php echo $row['course_name'] ?></td>
-                <td><?php echo $row['group_code'] ?></td>
                 <td><?php echo $row['date'] ?></td>
+                <td><?php echo $row['group_code'] ?></td>
                 <td><?php echo $row['time'] ?></td>
                 <td><?php echo $row['room'] ?></td>
-                <td>
-                <a href="editsession.php" name="sessEdit" class="cal2" style="text-decoration: none;" none;>Edit</a>
-                <a href="session.php" name="sessDel" class="cal3" style="text-decoration: none;">Delete</a>
-                </td>
+                
+                <?php $id = $row['id'];
+
+                echo
+                '<td>
+                    <a href="editSession.php?id='.$row['session_id'].'"><button class="cal2" name="editSession"><i class="fa fa-edit"></i></button></a>
+                    <a href="delete.php"><button class="cal3" name="sDel"><i class="fa fa-remove"></i></button></a>
+                </td>';
+                ?>
             </tr>
             <?php } ?>
 
-                <?php
-
-
-if(isset($_POST["sessEdit"])){
-
-    $id = $_POST["id"];
-    $group_id = mysqli_real_escape_string($connection, $_POST["group_id"]);
-    $course_id = mysqli_real_escape_string($connection, $_POST["course_id"]);
-    $date = mysqli_real_escape_string($connection, $_POST["date"]);
-    $slot_id  = mysqli_real_escape_string($connection, $_POST["slot_id"]);
-      $room  = mysqli_real_escape_string($connection, $_POST["room"]);
-
-    $sql = "UPDATE session
-    SET group_id = '$group_id', course_id = '$course_id', date = '$date', slot_id = '$slot_id', room = '$room'
-    WHERE id = '$id'";
-
-    if(mysqli_query($connection, $sql)){
-        $_SESSION["name"] = $row["name"];
-        $_SESSION["username"] = $row["username"];
-        
-        header("Location: addsession.php");
-
-    } else{
-        echo "ERROR";
-    }
-}
-
-?>
         </table>
 
     </body>

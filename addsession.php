@@ -2,7 +2,6 @@
 include('function.php');
 ?>
 
-
 <!doctype html>
 <html>
     <head>
@@ -36,14 +35,10 @@ include('server.php');
       
       <div>
         <p class="texts">Add your</p>
-        <p class="textsess">Class Session.</p>
-        
-       
+        <p class="textsess">Class Session.</p> 
       </div>
 
       <!-- Page Content -->
-
-
       <form name="form" action="add-session.php" method="post">
         <div class="form-manage">
           <p class='manage1'>Group</p>
