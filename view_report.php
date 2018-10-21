@@ -3,7 +3,7 @@ include('function.php');
 ?>
 
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,7 +36,7 @@ include('function.php');
 
         <!-- Detail -->
         <?php
-            $users = 'SELECT * FROM user WHERE username="'.$_SESSION['username'].'"';
+            $users = 'SELECT * FROM user WHERE id="'.$_SESSION['id'].'"';
             $run_query = mysqli_query($connection, $users);
             
         ?>
@@ -81,6 +81,18 @@ include('function.php');
                         <td><?php echo $row ['date'] ?></td>
                     </tr>
                     <?php } ?>
+
+                    <tr>
+                        <?php 
+                            $query1= 'SELECT * FROM attendance_status WHERE id="'.$_SESSION['id'].'"';
+                            $run_query1 = mysqli_query($connection, $query1);
+
+                            while () {
+                                # code...
+                            }
+                            ?>
+                        <td></td>
+                    </tr>
                 </thead>
                 <tbody>
                     

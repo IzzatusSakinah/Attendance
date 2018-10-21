@@ -39,7 +39,18 @@ include('function.php');
             </div>
            
         <div class="box-lecture">
-            <a href="session.php"><img id="image-2" src="img/lecture.png" style="width:80px; height:80px;"></a>
+            <?php 
+                if($_SESSION['role'] == "Group Leader" || $_SESSION['role'] == "Assistant Group Leader"){
+                echo'<a href="studentsession.php"><img id="image-2" src="img/lecture.png" style="width:80px; height:80px;"></a>';
+                }
+            ?>
+
+            <?php 
+                if($_SESSION['role'] == "module lecturer" || $_SESSION['role'] == "administration"){
+                echo'<a href="session.php"><img id="image-2" src="img/lecture.png" style="width:80px; height:80px;"></a>';
+                }
+            ?>            
+            
                 <p class="B-heading">Session</p>
         </div>
         </div> <!-- End Content -->

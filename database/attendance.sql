@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 20, 2018 at 12:20 PM
+-- Generation Time: Oct 21, 2018 at 08:36 AM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -195,7 +195,8 @@ INSERT INTO `gc` (`id`, `user_id`, `group_id`, `course_id`) VALUES
 (3, 26, 2, ''),
 (4, 28, 3, ''),
 (5, 24, 5, ''),
-(6, 30, 1, '1');
+(6, 30, 1, '1'),
+(7, 34, 2, '2');
 
 -- --------------------------------------------------------
 
@@ -467,12 +468,12 @@ INSERT INTO `user` (`id`, `name`, `email`, `username`, `password`, `role`, `code
 (27, 'Haji Aziman Haji Mohammed', 'haji.aziman@pb.edu.bn', 'hajiaziman', '12345', 'group coordinator', NULL, 0, ''),
 (28, 'Amal Umi Hafizah M Yusoff', 'amal.umi.hafizah@pb.edu.bn', 'amalumihafizah', '12345', 'group coordinator', NULL, 0, ''),
 (29, 'Mas Fatin Wahidah Mahdini', 'mas.fatin.wahidah@pb.edu.bn', 'masfatinwahidah', '12345', 'module lecturer', NULL, 0, ''),
-(30, 'Atiqah Musfirah Leong Mohd Dennis Leong', 'atiqah.musfirah.leong@pb.edu.bn', 'atiqahmusfirahleong', '12345', 'group coordinator', NULL, 0, ''),
-(31, ' Haji Si-Ramlee Haji Serudin', 'haji.siramlee@pb.edu.bn', 'hajisiramlee', '12345', 'module lecturer', NULL, 0, ''),
-(32, 'Bahit Hamid', 'bahit.hamid@pb.edu.bn', 'bahithamid', '12345', 'module lecturer', NULL, 0, ''),
-(33, 'Suok Leng Hii', 'suok.leng.hii@pb.edu.bn', 'suoklenghii', '12345', 'module lecturer', NULL, 0, ''),
-(34, 'Siti Nur\'Afifah binti Sait', 'afifah.sait@pb.edu.bn', 'afifahsait', '12345', 'module lecturer', '', 0, ''),
-(35, 'admin', 'admin@pb.edu.bn', 'admin', '12345', 'administration', NULL, 0, 'arch.png');
+(30, 'Atiqah Musfirah Leong Mohd Dennis Leong', 'atiqah.musfirah.leong@pb.edu.bn', 'atiqahmusfirahleong', '12345', 'group coordinator', NULL, 0, 'user.png'),
+(31, ' Haji Si-Ramlee Haji Serudin', 'haji.siramlee@pb.edu.bn', 'hajisiramlee', '12345', 'module lecturer', NULL, 0, 'user.png'),
+(32, 'Bahit Hamid', 'bahit.hamid@pb.edu.bn', 'bahithamid', '12345', 'module lecturer', NULL, 0, 'user.png'),
+(33, 'Suok Leng Hii', 'suok.leng.hii@pb.edu.bn', 'suoklenghii', '12345', 'module lecturer', NULL, 0, 'user.png'),
+(34, 'Siti Nur\'Afifah binti Sait', 'afifah.sait@pb.edu.bn', 'afifahsait', '12345', 'group coordinator', '', 0, 'user.png'),
+(35, 'admin', 'admin@pb.edu.bn', 'admin', '12345', 'administration', NULL, 0, '2980336.jpg');
 
 --
 -- Indexes for dumped tables
@@ -627,7 +628,7 @@ ALTER TABLE `course_student`
 -- AUTO_INCREMENT for table `gc`
 --
 ALTER TABLE `gc`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `gl`

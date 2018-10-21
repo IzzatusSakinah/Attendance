@@ -31,14 +31,14 @@ include('function.php');
     
 
 
-<div class="box-organize">
-            <div class="box-class-ict">
-                <div class="boxa"></div>
-                    <div id="image-1">
-                        <a href="adminviewgc.php"><img src="img/class.png" style="width:80px; height:80px;"></a>
-                    </div>
-                        <p class="A-heading">ICT</p>
-            </div>
+    <div class="box-organize">
+        <div class="box-class-ict">
+            <div class="boxa"></div>
+                <div id="image-1">
+                    <a href="adminviewgc.php"><img src="img/class.png" style="width:80px; height:80px;"></a>
+                </div>
+                    <p class="A-heading">ICT</p>
+        </div>
            
         <div class="box-class-business">
             <img id="image-2" src="img/lecture.png" style="width:80px; height:80px;">
@@ -53,10 +53,10 @@ include('function.php');
             <img id="image-2" src="img/lecture.png" style="width:80px; height:80px;">
                 <p class="B-heading">Engineering</p>
         </div>
-</div> <!-- End Content -->
+    </div> 
 
 
-<table>
+        <table>
             <tr>
                 <th>COURSE</th>
                 <th colspan="2">GROUP</th>

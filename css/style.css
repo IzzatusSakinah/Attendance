@@ -325,6 +325,35 @@ left: 450px;
 top: 70px;
 }
 
+.bt {
+    position: absolute;
+    background: #FF5A74;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 80%;
+    margin: 110px 0 0 500px;
+    padding: 15px;
+    width: 15%;
+    outline: medium none;
+    overflow: hidden;
+}
+
+.bt1 {
+    position: absolute;
+    background: #FF5A74;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 80%;
+    margin: 110px 0 0 740px;
+    padding: 15px;
+    width: 15%;
+    outline: medium none;
+    overflow: hidden;
+}
 .box-organizeLecturer {
 position: relative;
 left: 210px;

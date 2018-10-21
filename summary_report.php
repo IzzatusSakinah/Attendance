@@ -29,3 +29,6 @@ include('function.php');
         <?php
         include('header.php');
         ?>
+        
+    </body>
+</html>

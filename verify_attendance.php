@@ -1,5 +1,7 @@
 <?php 
 include('function.php');
+
+$id = $_GET['id'];
 ?>
 
 <!doctype html>
@@ -32,47 +34,35 @@ include('function.php');
 
         <!-- Content -->
         <div class="box">
-            <p>This is Class Attendance Sheet. Module Lecturer can verify this attendance.</p>
+            <p>This is Class Attendance Sheet. Only GL and AGL can update the attendance.</p>
         </div>
 
         <!-- Detail -->
         <div class="box-B">
-            <table class="detail">
+            <table class="detail"> 
                 <?php
-                $query = 'SELECT * FROM user WHERE username="'.$_SESSION['id'].'"';
-                $run_query = mysqli_query($connection, $query);
-                ?>
-                <?php
-                    foreach($run_query as $users){
-                        echo"<tr>
-                                <td>Group:</td>
-                                <td><p>".$users['code']."</p></td>
-                            </tr>";
-                    }
-                ?>   
+                $query2 = "SELECT * FROM session INNER JOIN group_table ON group_table.id = session.group_id INNER JOIN slot 
+                ON slot.id = session.slot_id WHERE session.id = '$id'";
+                $session = mysqli_query($connection, $query2);
+                
+                while ($row = mysqli_fetch_array($session)) { ?>
                 <tr>
-                    <td>Lecturer:</td>
-                    <td>Ms. Azu</td>
+                    <td>Group Code:</td>
+                    <td><?php echo $row['group_code'] ?></td>
                 </tr>    
                 <tr>
                     <td>Room:</td>
-                    <td>5.04</td>    
+                    <td><?php echo $row['room'] ?></td>    
                 </tr>
                 <tr>
                     <td>Date:</td>
-                    <td><input type="date" name="date"></td>
+                    <td><?php echo $row['date'] ?></td>
                 </tr>
                 <tr>
                     <td>Time:</td>
-                    <td>
-                        <select>
-                            <option>8:00am-10.00am</option>
-                            <option>10:30am-12:00pm</option>
-                            <option>01:00pm-02:30pm</option>
-                            <option>02:30pm-04:30pm</option>
-                        </select>
-                    </td>
+                    <td><?php echo $row['time'] ?></td>
                 </tr>
+                <?php } ?>
             </table>
             
         </div>
@@ -85,11 +75,11 @@ include('function.php');
                 </tr>
                 <tr>
                     <td>GL</td>
-                    <td>Syahmil</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>AGL</td>
-                    <td>Rafidahtulatiqah</td>
+                    <td></td>
                 </tr>
 
             </table>
