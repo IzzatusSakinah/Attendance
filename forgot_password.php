@@ -1,18 +1,16 @@
-<<<<<<< HEAD
 <?php include('function.php'); ?>
-=======
+
 <?php
 require_once('function.php');
 ?>
 
->>>>>>> 849005425a22836519485aebc50a6d5eec185f40
 <!doctype html>
-<html lang="{{ app()->getLocale() }}">
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/css/style.css">
+
         <title>Forgot Password</title>
 
         <!-- Fonts -->
@@ -27,7 +25,7 @@ require_once('function.php');
 <div id="body1">
     <body @media max display= 1080px-0>
     <form action="php-emailStockAlert.php" method="POST">
-       <div id="bg"><img src="img/campus.png" width="170%" height="1000px"></div>
+       <div id="bg"><img src="img/campus.png" width="150%" height="150%"></div>
             <div class="content box">
                 <div class="m">
                     <div class="get">
@@ -52,7 +50,7 @@ require_once('function.php');
                         <img src="img/back.png" width="15px">
                     </div>
                     <div>
-                        <a href="login.php" id="a">Sign In</a>
+                        <a href="index.php" id="a">Sign In</a>
                     </div>
 
             </div>

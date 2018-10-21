@@ -199,13 +199,12 @@ border: none;
 color: #fff;
 cursor: pointer;
 font-size: 80%;
-margin: -100px 0 0 1250px;
+margin: -100px 0 0 1150px;
 padding: 15px;
 width: 10%;
 outline: medium none;
 overflow: hidden;
-top: -500px;
-left: -100px;
+
 }
 
 .A-heading {
@@ -298,6 +297,20 @@ left: 240px;
 width: 80%;
 }
 
+.table-lecturer{
+position: relative;
+left: 240px;
+top: -430px;
+width: 80%;
+}
+
+.button-post{
+position: relative;
+left: 10px;
+top: -450px;
+width: 80%;    
+}
+
 .image_upload{
 position: relative;
 left: 400px;
@@ -310,6 +323,11 @@ height: 200px;
 position: relative;
 left: 450px;
 top: 70px;
+}
+
+.box-organizeLecturer {
+position: relative;
+left: 210px;
 }
 
 
@@ -361,7 +379,7 @@ html, body {
 }
 
 .m {
-    margin: 250px 0px 0px 200px;
+    margin: 100px 0px 0px 200px;
 }
 
 .get {
@@ -398,8 +416,8 @@ html, body {
 
 #bg{
     position: fixed;
-    top: -80px;
-    left: 50px;
+    top: -50px;
+    left: 100px;
     opacity: 0.1;
     
 }
@@ -445,7 +463,7 @@ input.btn[type="submit"]{
 
 #a{
     position: absolute;
-    margin: 350px 0px 0px 220px;
+    margin: 315px 0px 0px 240px;
     color: #81C8CE;
     font-size: 16px;
 }
@@ -465,7 +483,7 @@ font-size: 12px;
 
 .box-class-ict {
 position: relative;
-left: 200px;
+left: 100px;
 top: 73px;
 background-color: #FFFFFF;
 width: 246px;
@@ -475,7 +493,7 @@ height: 193px;
 
 .box-class-business {
 position: relative;
-left: 450px;
+left: 350px;
 top: -120px;
 background-color: #9CDFD6;
 width: 246px;
@@ -485,12 +503,20 @@ height: 193px;
 
 .box-class-hse {
 position: relative;
-left: 700px;
+left: 600px;
 top: -313px;
 background-color: #9CDFD6;
 width: 246px;
 height: 193px;
+}
 
+.box-class-engineering {
+position: relative;
+left: 850px;
+top: -507px;
+background-color: #9CDFD6;
+width: 246px;
+height: 193px;
 }
 
 /*STUDENTreport*/
@@ -801,21 +827,7 @@ background-color: #F6F6F5;
 } 
 
 /* Style page content */
-.main {
-margin-left: 160px; /* Same as the width of the sidebar */
-padding: 0px 10px;
-}
 
-.header-box {
-margin-left: 200px;
-position: relative;
-padding-top: 5px;
-width: 100%;
-height:80px;
-max-width: 100%;
-background-color: #FFFFFF;
-box-shadow: 2px 2px 2px #A09E9E;
-}
 .dashboardtext {
 position: relative;
 top: -15px;

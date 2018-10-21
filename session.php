@@ -8,6 +8,7 @@ include('function.php');
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <title>Session</title>
 
@@ -47,7 +48,7 @@ include('function.php');
             </div>
         </div>
 
-        <a href="addsession.php"><input class="cal" type="submit" name="add" value="Add Session"/></a>
+        <a href="addsession.php" style="text-decoration: none;"><input class="cal" type="submit" name="add" value="Add Session"/></a>
         
         <!-- Table -->
         <table class="table-pos">

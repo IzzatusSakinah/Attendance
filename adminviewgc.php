@@ -41,16 +41,16 @@ include('function.php');
             </div>
            
         <div class="box-class-business">
-            <a href="gcsession"><img id="image-2" src="img/lecture.png" style="width:80px; height:80px;"></a>
+            <img id="image-2" src="img/lecture.png" style="width:80px; height:80px;">
                 <p class="B-heading">Business</p>
         </div>
 
         <div class="box-class-hse">
-            <a href="gcsession"><img id="image-2" src="img/lecture.png" style="width:80px; height:80px;"></a>
+            <img id="image-2" src="img/lecture.png" style="width:80px; height:80px;">
                 <p class="B-heading">Health & Science</p>
         </div>
         <div class="box-class-engineering">
-            <a href="gcsession"><img id="image-2" src="img/lecture.png" style="width:80px; height:80px;"></a>
+            <img id="image-2" src="img/lecture.png" style="width:80px; height:80px;">
                 <p class="B-heading">Engineering</p>
         </div>
 </div> <!-- End Content -->
